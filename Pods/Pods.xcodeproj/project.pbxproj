@@ -1,0 +1,570 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C795689DDBF15C4AE6F4E07EEC881AC /* CameraKit-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78645B5F2FF10E0317B2466AF17F139C /* CameraKit-iOS-dummy.m */; };
+		0C960464951DF01D72DDC1253C167B95 /* Pods-Teleprompter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 412A412828C78AD2492AC4DD2A0F6677 /* Pods-Teleprompter-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		39117A181D438CAD57199AC8F56D6132 /* CKFVideoSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25639656D42D9FC0B0F7E65D58E943C6 /* CKFVideoSession.swift */; };
+		59B18BCBFE2E24668499FC2ACCE12932 /* CKFPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D1176C89FA741DC3D0EAC5E0A34131 /* CKFPreviewView.swift */; };
+		5D29232DFB165300C58C013E4F1CB252 /* CKFUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21510E88CA40A0DB5B15E54D633BAD97 /* CKFUtils.swift */; };
+		8775088958475C62966D3F220A436ABE /* CKFPhotoSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B54C70B4C3F2D24123FA11D4FDCE9B9 /* CKFPhotoSession.swift */; };
+		A5C896FEB21389C9991351CE649F02DD /* CKFGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E924AD0F6716C08C32BC764EC55EA6 /* CKFGridView.swift */; };
+		BA51B40543836F4B480277CC2C52C9A2 /* CKFSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6AA2483ECD08390D7B73A8E9A79B8B /* CKFSession.swift */; };
+		C55CEAC96BC96FB793F0A79C931CC4D5 /* CameraKit-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D82A519F8FB93DACA309E537488B846D /* CameraKit-iOS-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DD1E7282B100227278D38C680B5C1E11 /* CKFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6583A9CED7E46129FD9882D9CF24E97 /* CKFError.swift */; };
+		DF5FB48779638A3A126A1C8866317DAE /* Pods-Teleprompter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2067655714F767C5222A30A5357A33 /* Pods-Teleprompter-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		08C7565F516939C03CC4C8346293882F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4EF47FEED3C3CEAF89306D1AE3851CB;
+			remoteInfo = "CameraKit-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1DAD17DE221A72A588A8547AFCA1050F /* CameraKit-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "CameraKit-iOS.modulemap"; sourceTree = "<group>"; };
+		21510E88CA40A0DB5B15E54D633BAD97 /* CKFUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CKFUtils.swift; path = CameraKit/CameraKit/CKFUtils.swift; sourceTree = "<group>"; };
+		25639656D42D9FC0B0F7E65D58E943C6 /* CKFVideoSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CKFVideoSession.swift; path = CameraKit/CameraKit/CKFVideoSession.swift; sourceTree = "<group>"; };
+		322BEB792900F1548E12B2B243A26AFD /* CameraKit-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CameraKit-iOS-prefix.pch"; sourceTree = "<group>"; };
+		412A412828C78AD2492AC4DD2A0F6677 /* Pods-Teleprompter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Teleprompter-umbrella.h"; sourceTree = "<group>"; };
+		45E924AD0F6716C08C32BC764EC55EA6 /* CKFGridView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CKFGridView.swift; path = CameraKit/CameraKit/CKFGridView.swift; sourceTree = "<group>"; };
+		4B3023F8BEE94F1A99B48ACE282290EB /* Pods-Teleprompter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Teleprompter.release.xcconfig"; sourceTree = "<group>"; };
+		4F2067655714F767C5222A30A5357A33 /* Pods-Teleprompter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Teleprompter-dummy.m"; sourceTree = "<group>"; };
+		62B23374B5AB8306391C13B2C086F0E6 /* Pods-Teleprompter-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Teleprompter-acknowledgements.markdown"; sourceTree = "<group>"; };
+		68F7BD9DF56382D783CFCBB2F5427563 /* Pods-Teleprompter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Teleprompter.modulemap"; sourceTree = "<group>"; };
+		6B54C70B4C3F2D24123FA11D4FDCE9B9 /* CKFPhotoSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CKFPhotoSession.swift; path = CameraKit/CameraKit/CKFPhotoSession.swift; sourceTree = "<group>"; };
+		78645B5F2FF10E0317B2466AF17F139C /* CameraKit-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CameraKit-iOS-dummy.m"; sourceTree = "<group>"; };
+		80013FE04CF305B7C1CF5B02AD3FBC66 /* CameraKit-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "CameraKit-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		8B68B8637937121E3926BFF6291A5400 /* CameraKit-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "CameraKit-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A5D1176C89FA741DC3D0EAC5E0A34131 /* CKFPreviewView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CKFPreviewView.swift; path = CameraKit/CameraKit/CKFPreviewView.swift; sourceTree = "<group>"; };
+		BC6AA2483ECD08390D7B73A8E9A79B8B /* CKFSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CKFSession.swift; path = CameraKit/CameraKit/CKFSession.swift; sourceTree = "<group>"; };
+		CC12AC24240E4AE7E88BAC3025AEB909 /* Pods-Teleprompter */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-Teleprompter"; path = "libPods-Teleprompter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6583A9CED7E46129FD9882D9CF24E97 /* CKFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CKFError.swift; path = CameraKit/CameraKit/CKFError.swift; sourceTree = "<group>"; };
+		D82A519F8FB93DACA309E537488B846D /* CameraKit-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CameraKit-iOS-umbrella.h"; sourceTree = "<group>"; };
+		EDCC6F0F2451065D8DDFE6309C252D13 /* Pods-Teleprompter-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Teleprompter-acknowledgements.plist"; sourceTree = "<group>"; };
+		F20D0F475AD94970E52A96B1F84EC209 /* CameraKit-iOS */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "CameraKit-iOS"; path = "libCameraKit-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8C609778887EDE6165892028E2EC974 /* Pods-Teleprompter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Teleprompter.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		288049ECA6391C42AF1DB3EC9A81ABCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AFFF297C2BAD358F43222A275704F31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DCFEEC8C293A8D49904D88ED82F7F9E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA895D929C4FA6D12FA87DF35A0755F3 /* Pods-Teleprompter */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3E034172FC893B42B7F01D513DEBAE5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F20D0F475AD94970E52A96B1F84EC209 /* CameraKit-iOS */,
+				CC12AC24240E4AE7E88BAC3025AEB909 /* Pods-Teleprompter */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4655EF0061940C991404B543EF6CDEAD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DAD17DE221A72A588A8547AFCA1050F /* CameraKit-iOS.modulemap */,
+				78645B5F2FF10E0317B2466AF17F139C /* CameraKit-iOS-dummy.m */,
+				322BEB792900F1548E12B2B243A26AFD /* CameraKit-iOS-prefix.pch */,
+				D82A519F8FB93DACA309E537488B846D /* CameraKit-iOS-umbrella.h */,
+				80013FE04CF305B7C1CF5B02AD3FBC66 /* CameraKit-iOS.debug.xcconfig */,
+				8B68B8637937121E3926BFF6291A5400 /* CameraKit-iOS.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CameraKit-iOS";
+			sourceTree = "<group>";
+		};
+		8FBD7D4ECB1FB24BE5D58887E0DC43D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A181ED1F586958EC97AC5484FBB0E6C1 /* CameraKit-iOS */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A181ED1F586958EC97AC5484FBB0E6C1 /* CameraKit-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D6583A9CED7E46129FD9882D9CF24E97 /* CKFError.swift */,
+				45E924AD0F6716C08C32BC764EC55EA6 /* CKFGridView.swift */,
+				6B54C70B4C3F2D24123FA11D4FDCE9B9 /* CKFPhotoSession.swift */,
+				A5D1176C89FA741DC3D0EAC5E0A34131 /* CKFPreviewView.swift */,
+				BC6AA2483ECD08390D7B73A8E9A79B8B /* CKFSession.swift */,
+				21510E88CA40A0DB5B15E54D633BAD97 /* CKFUtils.swift */,
+				25639656D42D9FC0B0F7E65D58E943C6 /* CKFVideoSession.swift */,
+				4655EF0061940C991404B543EF6CDEAD /* Support Files */,
+			);
+			path = "CameraKit-iOS";
+			sourceTree = "<group>";
+		};
+		AA895D929C4FA6D12FA87DF35A0755F3 /* Pods-Teleprompter */ = {
+			isa = PBXGroup;
+			children = (
+				68F7BD9DF56382D783CFCBB2F5427563 /* Pods-Teleprompter.modulemap */,
+				62B23374B5AB8306391C13B2C086F0E6 /* Pods-Teleprompter-acknowledgements.markdown */,
+				EDCC6F0F2451065D8DDFE6309C252D13 /* Pods-Teleprompter-acknowledgements.plist */,
+				4F2067655714F767C5222A30A5357A33 /* Pods-Teleprompter-dummy.m */,
+				412A412828C78AD2492AC4DD2A0F6677 /* Pods-Teleprompter-umbrella.h */,
+				F8C609778887EDE6165892028E2EC974 /* Pods-Teleprompter.debug.xcconfig */,
+				4B3023F8BEE94F1A99B48ACE282290EB /* Pods-Teleprompter.release.xcconfig */,
+			);
+			name = "Pods-Teleprompter";
+			path = "Target Support Files/Pods-Teleprompter";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				8FBD7D4ECB1FB24BE5D58887E0DC43D2 /* Pods */,
+				3E034172FC893B42B7F01D513DEBAE5B /* Products */,
+				0DCFEEC8C293A8D49904D88ED82F7F9E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5124E0BC74FBBEF75B26F1EA99D5AD62 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C55CEAC96BC96FB793F0A79C931CC4D5 /* CameraKit-iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C30AA9EDD0B29CBF76483FEF4AC0315A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C960464951DF01D72DDC1253C167B95 /* Pods-Teleprompter-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		202F377084C030A188ACBCF7B001DD74 /* Pods-Teleprompter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54F52F6FAFA9827D4D00994D34CE4306 /* Build configuration list for PBXNativeTarget "Pods-Teleprompter" */;
+			buildPhases = (
+				C30AA9EDD0B29CBF76483FEF4AC0315A /* Headers */,
+				03B176293F7A23E26296E9393832FCB1 /* Sources */,
+				2AFFF297C2BAD358F43222A275704F31 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C972181159E53D53BA97BDBDE3D30021 /* PBXTargetDependency */,
+			);
+			name = "Pods-Teleprompter";
+			productName = "Pods-Teleprompter";
+			productReference = CC12AC24240E4AE7E88BAC3025AEB909 /* Pods-Teleprompter */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B4EF47FEED3C3CEAF89306D1AE3851CB /* CameraKit-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A657F3C4CE8929EE8E77078AB304094 /* Build configuration list for PBXNativeTarget "CameraKit-iOS" */;
+			buildPhases = (
+				5124E0BC74FBBEF75B26F1EA99D5AD62 /* Headers */,
+				5AE441B7BCC685004C322ED8AEDFBEA9 /* Sources */,
+				288049ECA6391C42AF1DB3EC9A81ABCB /* Frameworks */,
+				D2FE9A27CF8ADF32DA594864A89F8069 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CameraKit-iOS";
+			productName = "CameraKit-iOS";
+			productReference = F20D0F475AD94970E52A96B1F84EC209 /* CameraKit-iOS */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 3E034172FC893B42B7F01D513DEBAE5B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B4EF47FEED3C3CEAF89306D1AE3851CB /* CameraKit-iOS */,
+				202F377084C030A188ACBCF7B001DD74 /* Pods-Teleprompter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D2FE9A27CF8ADF32DA594864A89F8069 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/CameraKit_iOS/CameraKit-iOS.modulemap",
+				"${PODS_ROOT}/Headers/Public/CameraKit_iOS/CameraKit-iOS-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/CameraKit-iOS-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/CameraKit_iOS/CameraKit-iOS.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/CameraKit_iOS/CameraKit-iOS-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03B176293F7A23E26296E9393832FCB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF5FB48779638A3A126A1C8866317DAE /* Pods-Teleprompter-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AE441B7BCC685004C322ED8AEDFBEA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C795689DDBF15C4AE6F4E07EEC881AC /* CameraKit-iOS-dummy.m in Sources */,
+				DD1E7282B100227278D38C680B5C1E11 /* CKFError.swift in Sources */,
+				A5C896FEB21389C9991351CE649F02DD /* CKFGridView.swift in Sources */,
+				8775088958475C62966D3F220A436ABE /* CKFPhotoSession.swift in Sources */,
+				59B18BCBFE2E24668499FC2ACCE12932 /* CKFPreviewView.swift in Sources */,
+				BA51B40543836F4B480277CC2C52C9A2 /* CKFSession.swift in Sources */,
+				5D29232DFB165300C58C013E4F1CB252 /* CKFUtils.swift in Sources */,
+				39117A181D438CAD57199AC8F56D6132 /* CKFVideoSession.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C972181159E53D53BA97BDBDE3D30021 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CameraKit-iOS";
+			target = B4EF47FEED3C3CEAF89306D1AE3851CB /* CameraKit-iOS */;
+			targetProxy = 08C7565F516939C03CC4C8346293882F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1261CF1DB3D8ABF931F6D138A1605ACC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B68B8637937121E3926BFF6291A5400 /* CameraKit-iOS.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CameraKit-iOS/CameraKit-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MODULEMAP_FILE = "Headers/Public/CameraKit_iOS/CameraKit-iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CameraKit_iOS;
+				PRODUCT_NAME = "CameraKit-iOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2627BD38D54CCAFAF1789EBEF2741E05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80013FE04CF305B7C1CF5B02AD3FBC66 /* CameraKit-iOS.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CameraKit-iOS/CameraKit-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MODULEMAP_FILE = "Headers/Public/CameraKit_iOS/CameraKit-iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CameraKit_iOS;
+				PRODUCT_NAME = "CameraKit-iOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4903E2CA8FB889F7306FACC1C67ACF7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B3023F8BEE94F1A99B48ACE282290EB /* Pods-Teleprompter.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Teleprompter/Pods-Teleprompter.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B66F7251DA791F793B811C8214E399F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8C609778887EDE6165892028E2EC974 /* Pods-Teleprompter.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Teleprompter/Pods-Teleprompter.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC01E0B73776AF6B58DC318A9BE988D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C605C363CC9F26F9FF97DBB1D5C6E25C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A657F3C4CE8929EE8E77078AB304094 /* Build configuration list for PBXNativeTarget "CameraKit-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2627BD38D54CCAFAF1789EBEF2741E05 /* Debug */,
+				1261CF1DB3D8ABF931F6D138A1605ACC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC01E0B73776AF6B58DC318A9BE988D7 /* Debug */,
+				C605C363CC9F26F9FF97DBB1D5C6E25C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54F52F6FAFA9827D4D00994D34CE4306 /* Build configuration list for PBXNativeTarget "Pods-Teleprompter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B66F7251DA791F793B811C8214E399F9 /* Debug */,
+				4903E2CA8FB889F7306FACC1C67ACF7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
