@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37D9C7217C5DBAC8BD6AD7B0 /* libPods-TeleprompterTests_.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A36EF6D923AA9FA9222B1C17 /* libPods-TeleprompterTests_.a */; };
+		4DD99597330FB2EECB63E818 /* libPods-Teleprompter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9DD49F0DD557983505708D /* libPods-Teleprompter.a */; };
 		9F196DE72708B855009C667A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F196DE62708B855009C667A /* AppDelegate.swift */; };
 		9F196DE92708B855009C667A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F196DE82708B855009C667A /* SceneDelegate.swift */; };
 		9F196DEE2708B855009C667A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F196DEC2708B855009C667A /* Main.storyboard */; };
@@ -19,11 +21,13 @@
 		9F196E032708D1E7009C667A /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F196E022708D1E7009C667A /* AddItemViewController.swift */; };
 		9F196E052708DEF0009C667A /* ItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F196E042708DEF0009C667A /* ItemViewCell.swift */; };
 		9F4957EA270B88D6002040D5 /* MovieComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4957E9270B88D6002040D5 /* MovieComposer.swift */; };
+		9F61537A270C675700D49516 /* TeleprompterTests_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F615379270C675700D49516 /* TeleprompterTests_.swift */; };
 		9FC064DE2709FDB300AE94D6 /* RecoredVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC064DD2709FDB300AE94D6 /* RecoredVideoViewController.swift */; };
+		9FD7923D270C9D5F008EFD25 /* ScriptsSavingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD7923C270C9D5F008EFD25 /* ScriptsSavingTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9F61536E270C66C800D49516 /* PBXContainerItemProxy */ = {
+		9F61537C270C675700D49516 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9F196DDB2708B855009C667A /* Project object */;
 			proxyType = 1;
@@ -33,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F0F9A7F9C9F3B1B669405C4 /* Pods-TeleprompterTests_.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleprompterTests_.release.xcconfig"; path = "Target Support Files/Pods-TeleprompterTests_/Pods-TeleprompterTests_.release.xcconfig"; sourceTree = "<group>"; };
 		5A774A69CC0B8A85ACA0788C /* Pods-Teleprompter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teleprompter.release.xcconfig"; path = "Target Support Files/Pods-Teleprompter/Pods-Teleprompter.release.xcconfig"; sourceTree = "<group>"; };
 		9F196DE32708B855009C667A /* Teleprompter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teleprompter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F196DE62708B855009C667A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,10 +53,15 @@
 		9F196E022708D1E7009C667A /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		9F196E042708DEF0009C667A /* ItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewCell.swift; sourceTree = "<group>"; };
 		9F4957E9270B88D6002040D5 /* MovieComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieComposer.swift; sourceTree = "<group>"; };
-		9F615369270C66C800D49516 /* TeleprompterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeleprompterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F615377270C675700D49516 /* TeleprompterTests_.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeleprompterTests_.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F615379270C675700D49516 /* TeleprompterTests_.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleprompterTests_.swift; sourceTree = "<group>"; };
+		9F61537B270C675700D49516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FC064DD2709FDB300AE94D6 /* RecoredVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoredVideoViewController.swift; sourceTree = "<group>"; };
+		9FD7923C270C9D5F008EFD25 /* ScriptsSavingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptsSavingTests.swift; sourceTree = "<group>"; };
+		A36EF6D923AA9FA9222B1C17 /* libPods-TeleprompterTests_.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TeleprompterTests_.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9DD49F0DD557983505708D /* libPods-Teleprompter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Teleprompter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C607453AD20ADC303197A8AD /* Pods-Teleprompter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teleprompter.debug.xcconfig"; path = "Target Support Files/Pods-Teleprompter/Pods-Teleprompter.debug.xcconfig"; sourceTree = "<group>"; };
+		E3F89B5663497686CCE21F51 /* Pods-TeleprompterTests_.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleprompterTests_.debug.xcconfig"; path = "Target Support Files/Pods-TeleprompterTests_/Pods-TeleprompterTests_.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +69,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DD99597330FB2EECB63E818 /* libPods-Teleprompter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9F615366270C66C800D49516 /* Frameworks */ = {
+		9F615374270C675700D49516 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37D9C7217C5DBAC8BD6AD7B0 /* libPods-TeleprompterTests_.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				9F196DE52708B855009C667A /* Teleprompter */,
+				9F615378270C675700D49516 /* TeleprompterTests_ */,
 				9F196DE42708B855009C667A /* Products */,
 				BA28C4D63E7EAC03DB0C770E /* Pods */,
 				B317DD331CE15278514415B7 /* Frameworks */,
@@ -86,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				9F196DE32708B855009C667A /* Teleprompter.app */,
-				9F615369270C66C800D49516 /* TeleprompterTests.xctest */,
+				9F615377270C675700D49516 /* TeleprompterTests_.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,10 +125,21 @@
 			path = Teleprompter;
 			sourceTree = "<group>";
 		};
+		9F615378270C675700D49516 /* TeleprompterTests_ */ = {
+			isa = PBXGroup;
+			children = (
+				9F615379270C675700D49516 /* TeleprompterTests_.swift */,
+				9FD7923C270C9D5F008EFD25 /* ScriptsSavingTests.swift */,
+				9F61537B270C675700D49516 /* Info.plist */,
+			);
+			path = TeleprompterTests_;
+			sourceTree = "<group>";
+		};
 		B317DD331CE15278514415B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				BA9DD49F0DD557983505708D /* libPods-Teleprompter.a */,
+				A36EF6D923AA9FA9222B1C17 /* libPods-TeleprompterTests_.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,6 +149,8 @@
 			children = (
 				C607453AD20ADC303197A8AD /* Pods-Teleprompter.debug.xcconfig */,
 				5A774A69CC0B8A85ACA0788C /* Pods-Teleprompter.release.xcconfig */,
+				E3F89B5663497686CCE21F51 /* Pods-TeleprompterTests_.debug.xcconfig */,
+				3F0F9A7F9C9F3B1B669405C4 /* Pods-TeleprompterTests_.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -150,22 +176,23 @@
 			productReference = 9F196DE32708B855009C667A /* Teleprompter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9F615368270C66C800D49516 /* TeleprompterTests */ = {
+		9F615376270C675700D49516 /* TeleprompterTests_ */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F615370270C66C800D49516 /* Build configuration list for PBXNativeTarget "TeleprompterTests" */;
+			buildConfigurationList = 9F61537E270C675700D49516 /* Build configuration list for PBXNativeTarget "TeleprompterTests_" */;
 			buildPhases = (
-				9F615365270C66C800D49516 /* Sources */,
-				9F615366270C66C800D49516 /* Frameworks */,
-				9F615367270C66C800D49516 /* Resources */,
+				4932DC56B83E4F05D93C0631 /* [CP] Check Pods Manifest.lock */,
+				9F615373270C675700D49516 /* Sources */,
+				9F615374270C675700D49516 /* Frameworks */,
+				9F615375270C675700D49516 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9F61536F270C66C800D49516 /* PBXTargetDependency */,
+				9F61537D270C675700D49516 /* PBXTargetDependency */,
 			);
-			name = TeleprompterTests;
-			productName = TeleprompterTests;
-			productReference = 9F615369270C66C800D49516 /* TeleprompterTests.xctest */;
+			name = TeleprompterTests_;
+			productName = TeleprompterTests_;
+			productReference = 9F615377270C675700D49516 /* TeleprompterTests_.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -180,7 +207,7 @@
 					9F196DE22708B855009C667A = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
-					9F615368270C66C800D49516 = {
+					9F615376270C675700D49516 = {
 						CreatedOnToolsVersion = 12.5.1;
 						TestTargetID = 9F196DE22708B855009C667A;
 					};
@@ -200,7 +227,7 @@
 			projectRoot = "";
 			targets = (
 				9F196DE22708B855009C667A /* Teleprompter */,
-				9F615368270C66C800D49516 /* TeleprompterTests */,
+				9F615376270C675700D49516 /* TeleprompterTests_ */,
 			);
 		};
 /* End PBXProject section */
@@ -216,7 +243,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9F615367270C66C800D49516 /* Resources */ = {
+		9F615375270C675700D49516 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -226,6 +253,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4932DC56B83E4F05D93C0631 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TeleprompterTests_-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		ADB890CADF60ABE414A3AB5F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,20 +317,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9F615365270C66C800D49516 /* Sources */ = {
+		9F615373270C675700D49516 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FD7923D270C9D5F008EFD25 /* ScriptsSavingTests.swift in Sources */,
+				9F61537A270C675700D49516 /* TeleprompterTests_.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9F61536F270C66C800D49516 /* PBXTargetDependency */ = {
+		9F61537D270C675700D49516 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9F196DE22708B855009C667A /* Teleprompter */;
-			targetProxy = 9F61536E270C66C800D49516 /* PBXContainerItemProxy */;
+			targetProxy = 9F61537C270C675700D49516 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -356,7 +407,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -411,7 +462,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -472,19 +523,20 @@
 			};
 			name = Release;
 		};
-		9F615371270C66C800D49516 /* Debug */ = {
+		9F61537F270C675700D49516 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3F89B5663497686CCE21F51 /* Pods-TeleprompterTests_.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AHJJ77N3U7;
-				INFOPLIST_FILE = TeleprompterTests/Info.plist;
+				INFOPLIST_FILE = TeleprompterTests_/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fgami.TeleprompterTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "fgami.TeleprompterTests-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -492,19 +544,20 @@
 			};
 			name = Debug;
 		};
-		9F615372270C66C800D49516 /* Release */ = {
+		9F615380270C675700D49516 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F0F9A7F9C9F3B1B669405C4 /* Pods-TeleprompterTests_.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AHJJ77N3U7;
-				INFOPLIST_FILE = TeleprompterTests/Info.plist;
+				INFOPLIST_FILE = TeleprompterTests_/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fgami.TeleprompterTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "fgami.TeleprompterTests-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -533,11 +586,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		9F615370270C66C800D49516 /* Build configuration list for PBXNativeTarget "TeleprompterTests" */ = {
+		9F61537E270C675700D49516 /* Build configuration list for PBXNativeTarget "TeleprompterTests_" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9F615371270C66C800D49516 /* Debug */,
-				9F615372270C66C800D49516 /* Release */,
+				9F61537F270C675700D49516 /* Debug */,
+				9F615380270C675700D49516 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

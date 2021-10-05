@@ -14,7 +14,7 @@ var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = RecoredVideoViewController()
+        self.window?.rootViewController = UIViewController.instantiateViewController(using: "ItemsViewControler", type: ItemsViewControler.self)
         self.window?.makeKeyAndVisible()
         return true
     }

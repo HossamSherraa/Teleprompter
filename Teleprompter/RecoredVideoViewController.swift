@@ -8,7 +8,7 @@
 import UIKit
 
 class RecoredVideoViewController : UIViewController {
-   
+    var scriptItem : ScriptItem? = nil
     let cameraViewController = UIViewController.instantiateViewController(using: "CameraViewController", type: CameraViewController.self)
     let controlPanelViewController = UIViewController.instantiateViewController(using: "ControlPanelViewController", type: ControlPanelViewController.self)
     let textViewController = UIViewController.instantiateViewController(using: "TextViewController", type: TextViewController.self)
@@ -18,8 +18,14 @@ class RecoredVideoViewController : UIViewController {
         super.viewDidLoad()
         buildViewChilds()
         setViewControllerDelegate()
+        loadScriptItemDetailsToTextView()
     }
     
+    private func loadScriptItemDetailsToTextView(){
+        if let scriptItem = scriptItem {
+            self.textViewController.setText(text: scriptItem.scriptContent)
+        }
+    }
     func buildViewChilds(){
         
        let cameraView = add(cameraViewController)

@@ -6,11 +6,26 @@
 //
 
 import UIKit
+protocol ItemViewCellDelegate : AnyObject {
+    func onPressMenu(at indexPath : IndexPath)
+}
 class ItemViewCell : UITableViewCell {
+   private  weak var delegate : ItemViewCellDelegate?
+    private var indexPath : IndexPath!
+    @IBOutlet private weak var itemTitle: UILabel!
+    @IBAction private func onPressMenu(_ sender: UIButton) {
+        delegate?.onPressMenu(at: indexPath)
+    }
     
-    @IBOutlet weak var itemTitle: UILabel!
-    @IBAction func onPressMenu(_ sender: UIButton) {
-        
-        
+    public func setIndexPath(_ indexPath : IndexPath){
+        self.indexPath = indexPath
+    }
+    
+    public func setCellActionsDelegate(_ delegate : ItemViewCellDelegate){
+        self.delegate = delegate
+    }
+    
+    public func setTitle(text : String){
+        self.itemTitle.text = text
     }
 }
