@@ -22,6 +22,7 @@
 		9F196E052708DEF0009C667A /* ItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F196E042708DEF0009C667A /* ItemViewCell.swift */; };
 		9F4957EA270B88D6002040D5 /* MovieComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4957E9270B88D6002040D5 /* MovieComposer.swift */; };
 		9F61537A270C675700D49516 /* TeleprompterTests_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F615379270C675700D49516 /* TeleprompterTests_.swift */; };
+		9F7FEED12715AF7600829A0F /* MovieRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7FEED02715AF7600829A0F /* MovieRecorder.swift */; };
 		9FC064DE2709FDB300AE94D6 /* RecoredVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC064DD2709FDB300AE94D6 /* RecoredVideoViewController.swift */; };
 		9FD7923D270C9D5F008EFD25 /* ScriptsSavingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD7923C270C9D5F008EFD25 /* ScriptsSavingTests.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		9F615377270C675700D49516 /* TeleprompterTests_.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeleprompterTests_.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F615379270C675700D49516 /* TeleprompterTests_.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleprompterTests_.swift; sourceTree = "<group>"; };
 		9F61537B270C675700D49516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F7FEED02715AF7600829A0F /* MovieRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRecorder.swift; sourceTree = "<group>"; };
 		9FC064DD2709FDB300AE94D6 /* RecoredVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoredVideoViewController.swift; sourceTree = "<group>"; };
 		9FD7923C270C9D5F008EFD25 /* ScriptsSavingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptsSavingTests.swift; sourceTree = "<group>"; };
 		A36EF6D923AA9FA9222B1C17 /* libPods-TeleprompterTests_.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TeleprompterTests_.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +119,7 @@
 				9F196DFA2708D15B009C667A /* ControlPanelViewController.swift */,
 				9FC064DD2709FDB300AE94D6 /* RecoredVideoViewController.swift */,
 				9F4957E9270B88D6002040D5 /* MovieComposer.swift */,
+				9F7FEED02715AF7600829A0F /* MovieRecorder.swift */,
 				9F196DEC2708B855009C667A /* Main.storyboard */,
 				9F196DEF2708B856009C667A /* Assets.xcassets */,
 				9F196DF12708B856009C667A /* LaunchScreen.storyboard */,
@@ -312,6 +315,7 @@
 				9F196DE92708B855009C667A /* SceneDelegate.swift in Sources */,
 				9F4957EA270B88D6002040D5 /* MovieComposer.swift in Sources */,
 				9F196DFF2708D18E009C667A /* CameraViewController.swift in Sources */,
+				9F7FEED12715AF7600829A0F /* MovieRecorder.swift in Sources */,
 				9F196E052708DEF0009C667A /* ItemViewCell.swift in Sources */,
 				9FC064DE2709FDB300AE94D6 /* RecoredVideoViewController.swift in Sources */,
 			);

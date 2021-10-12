@@ -26,8 +26,14 @@ struct Aspect {
     }
 }
 
-class CaptureSessionManager {
-    let session = CKFVideoSession(position: .front)
+protocol CaptureSessionManagerDelegate : AnyObject {
+    func didCompleteRecordingAt(url : URL)
+}
+class CaptureSessionManager : NSObject , AVCaptureFileOutputRecordingDelegate{
+    private var aspect : Aspect?
+    
+    weak var delegate : CaptureSessionManagerDelegate?
+   lazy var  movieRecorder : MovieRecorder = MovieRecorder(exportURL: tempLinkURL, delegate: self)
     let composer = MovieComposer()
     
     var tempLinkURL : URL =  {
@@ -42,101 +48,112 @@ class CaptureSessionManager {
     
    
     
-    func startRecordingAt(url : URL , aspect : Aspect , completion : @escaping (URL)->Void ){
-        session.record(url: tempLinkURL, { fullVideoSizeUrl in
-            self.composer.addVideo(fullVideoSizeUrl, aspect: aspect)
-            let exportSession = self.composer.readyToComposeVideo(url)
-            exportSession?.exportAsynchronously {
-                completion(url)
-            }
-            
-        }, error: {error in
-            print(error)
-        })
+    func startRecordingAt(aspect : Aspect){
+        self.aspect = aspect
+        movieRecorder.startRecording()
     }
     
     func stopRecording(){
-        session.stopRecording()
+        movieRecorder.endRecording()
     }
     
     
-    func getPreviewView()->CKFPreviewView {
-        let previewView = CKFPreviewView(frame: .zero)
-        previewView.session = session
-        return previewView
+    func getPreviewLayer()->AVCaptureVideoPreviewLayer {
+        let layer = AVCaptureVideoPreviewLayer(session: movieRecorder.session)
+        layer.videoGravity = .resizeAspectFill
+        return layer
+    }
+    
+    
+    
+    func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
+      
+        //SaveToPhotos
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0] as URL
+        let filePath = documentsDirectory.appendingPathComponent("r\(Date().description).mov")
+        guard let aspect = self.aspect else {return}
+        composer.addVideo(outputFileURL, aspect: aspect)
+        let exportSession = composer.readyToComposeVideo(filePath)
+        exportSession?.exportAsynchronously {
+            
+            PHPhotoLibrary.shared().performChanges({
+                PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: filePath)
+            }) { saved, error in
+                if saved {
+                    self.delegate?.didCompleteRecordingAt(url: filePath)
+                    let fetchOptions = PHFetchOptions()
+                    fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+                    
+                }
+            }
+        }
+        
     }
     
     
 }
-class CameraViewController : UIViewController {
+class CameraViewController : UIViewController , CaptureSessionManagerDelegate {
     var isRecording : Bool = false
     @IBOutlet weak var previewView: UIView!
     var captureSessionManager : CaptureSessionManager = CaptureSessionManager()
-    private var _previewView : CKFPreviewView!
+    
+    var  previewLayer : AVCaptureVideoPreviewLayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        captureSessionManager.delegate = self
         configPreviewView()
     }
     
     func configPreviewView(){
-       let previewView =  captureSessionManager.getPreviewView()
-        self._previewView = previewView
-        self.previewView.addSubview(previewView)
+       let previewLayer =  captureSessionManager.getPreviewLayer()
+        
+        self.previewView.layer.addSublayer(previewLayer)
+        self.previewLayer = previewLayer
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        _previewView.frame = previewView.bounds
+        self.previewLayer?.frame = previewView.bounds
         
-        _previewView.previewLayer?.connection?.videoOrientation = UIDevice.current.orientation.videoOrientation
+        self.previewLayer?.connection?.videoOrientation = UIDevice.current.orientation.videoOrientation
     }
     
     func startRecording(){
       
+        //manager.startRecording(completion :@escaping (URL)->Void)
       isRecording = true
+        captureSessionManager.startRecordingAt(aspect: .init(width: 1, height: 1))
        
-        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0] as URL
-        let filePath = documentsDirectory.appendingPathComponent("r\(Date().description).mp4")
-        
-        captureSessionManager.startRecordingAt(url: filePath, aspect: .init(width: 1, height: 1)) {[weak self] url in
-            guard let self = self else {return}
-            PHPhotoLibrary.shared().performChanges({
-                PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: url)
-            }) { saved, error in
-                if saved {
-                    let fetchOptions = PHFetchOptions()
-                    fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
-
-                    
-                }
-            }
-            
-            
-            DispatchQueue.main.async {
-                let player = AVPlayer(url: url)
-                let vc = AVPlayerViewController()
-                vc.player = player
-
-                self.present(vc, animated: true) {
-                    vc.player?.play()
-                }
-            }
-            self.resetSession()
-        }
     }
     
     func stopRecording(){
+        isRecording = false
         captureSessionManager.stopRecording()
         
     }
     
-    func resetSession(){
-        self.captureSessionManager = CaptureSessionManager()
+    
+    internal func didCompleteRecordingAt(url : URL) {
         DispatchQueue.main.async {
-            self._previewView.session  = self.captureSessionManager.session
-            self._previewView.layoutIfNeeded()
-            
+                     let player = AVPlayer(url: url)
+                     let vc = AVPlayerViewController()
+                     vc.player = player
+     
+                     self.present(vc, animated: true) {
+                         vc.player?.play()
+//                        self.resetSession()
+                        
+                     }
+                 }
+    }
+    func resetSession(){
+        DispatchQueue.main.async {
+        self.captureSessionManager = CaptureSessionManager()
+        self.captureSessionManager.delegate = self
+            self.previewLayer = self.captureSessionManager.getPreviewLayer()
+            self.previewView.layoutIfNeeded()
+
         }
     }
     

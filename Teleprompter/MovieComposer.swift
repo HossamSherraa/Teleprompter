@@ -31,12 +31,14 @@ import CoreMedia
          videoComposition.frameDuration = .init(value: 1, timescale: 30)
          
          let tracks = getTrack(videoAsset)
+        print(tracks.count ,
+              "RTTX")
         
         var compositionVideoTrack: AVMutableCompositionTrack!
         var compositionAudioTrack: AVMutableCompositionTrack!
          
         let videoTrack = tracks.filter({$0.mediaType == .video}).first!
-        compositionVideoTrack = mixComposition.addMutableTrack(withMediaType: AVMediaType.video, preferredTrackID: 1)
+        compositionVideoTrack = mixComposition.addMutableTrack(withMediaType: AVMediaType.video, preferredTrackID: kCMPersistentTrackID_Invalid)
          
          
         do {
@@ -50,9 +52,9 @@ import CoreMedia
         
        
         
-        compositionAudioTrack = mixComposition.addMutableTrack(withMediaType: AVMediaType.audio, preferredTrackID: 1)
+        compositionAudioTrack = mixComposition.addMutableTrack(withMediaType: AVMediaType.audio, preferredTrackID: kCMPersistentTrackID_Invalid)
         do {
-            print(tracks.count , "RR")
+           
             try compositionAudioTrack.insertTimeRange(
                 CMTimeRange(start: CMTime.zero, duration: videoAsset.duration),
                 of: tracks.filter({$0.mediaType == .audio}).first! ,
