@@ -7,7 +7,9 @@
 
 import AVFoundation
 
+
 class MovieRecorder {
+    static var isVideoShouldBeSaved : Bool = true
     internal init(exportURL: URL, delegate: AVCaptureFileOutputRecordingDelegate?) {
         self.exportURL = exportURL
         self.delegate = delegate
@@ -16,7 +18,7 @@ class MovieRecorder {
     
     let exportURL : URL
     weak var delegate : AVCaptureFileOutputRecordingDelegate?
-     let session = AVCaptureSession()
+     var  session = AVCaptureSession()
     private let captureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front)
     private let audioCaptureDevice = AVCaptureDevice.default(for: .audio)
     private lazy var inputDevice = try! AVCaptureDeviceInput(device: captureDevice!)
@@ -33,8 +35,8 @@ class MovieRecorder {
         session.addInput(inputAudiDevice)
         session.addOutput(outputMovie)
         session.commitConfiguration()
-        
         session.startRunning()
+        
         
         
     }
@@ -50,5 +52,7 @@ class MovieRecorder {
         outputMovie.stopRecording()
     }
     
- 
+   
 }
+
+

@@ -12,6 +12,8 @@ class RecoredVideoViewController : UIViewController {
     let cameraViewController = UIViewController.instantiateViewController(using: "CameraViewController", type: CameraViewController.self)
     let controlPanelViewController = UIViewController.instantiateViewController(using: "ControlPanelViewController", type: ControlPanelViewController.self)
     let textViewController = UIViewController.instantiateViewController(using: "TextViewController", type: TextViewController.self)
+    let loadingViewController = UIViewController.instantiateViewController(using: "LoadingViewController", type: UIViewController.self)
+    let countViewController = UIViewController.instantiateViewController(using: "CountViewController", type: CountViewController.self)
     
     
     override func viewDidLoad() {
@@ -19,6 +21,12 @@ class RecoredVideoViewController : UIViewController {
         buildViewChilds()
         setViewControllerDelegate()
         loadScriptItemDetailsToTextView()
+        
+        loadingViewController.view.isHidden = true
+        countViewController.view.isHidden = true
+        
+        cameraViewController.delegate = self
+        countViewController.delegate = self
     }
     
     private func loadScriptItemDetailsToTextView(){
@@ -31,6 +39,8 @@ class RecoredVideoViewController : UIViewController {
        let cameraView = add(cameraViewController)
        let controlPanelView = add(controlPanelViewController)
        let textView = add(textViewController)
+       let loadingView = add(loadingViewController)
+       let countView = add(countViewController)
         
         NSLayoutConstraint.activate([
             
@@ -49,6 +59,18 @@ class RecoredVideoViewController : UIViewController {
             controlPanelView.topAnchor.constraint(equalTo: textView.bottomAnchor ),
             view.trailingAnchor.constraint(equalTo: controlPanelView.trailingAnchor),
             controlPanelView.bottomAnchor.constraint(equalTo: view.bottomAnchor) ,
+            
+            loadingView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            loadingView.topAnchor.constraint(equalTo: view.topAnchor),
+            loadingView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            loadingView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            countView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            countView.topAnchor.constraint(equalTo: view.topAnchor),
+            countView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            countView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            
+            
            
         
         ])
@@ -86,8 +108,8 @@ extension UIViewController {
 //MARK:- ControlPanelDelegate
 extension RecoredVideoViewController : ControlPanelDelegate {
     func onPressRecored() {
-        textViewController.startMoving()
-        cameraViewController.startRecording()
+        countViewController.start()
+        countViewController.view.isHidden = false
     }
     
     func onPressStopRecored() {
@@ -110,7 +132,7 @@ extension RecoredVideoViewController : ControlPanelDelegate {
     }
     
     func didChangeRecoredSize(recoredSize: RecoredSize) {
-        print(recoredSize)
+        cameraViewController.setAspect(recoredSize.aspect)
     }
     
     func didChangeSpeed(newValue: Float) {
@@ -119,6 +141,34 @@ extension RecoredVideoViewController : ControlPanelDelegate {
     
     
     
+    
+    
+}
+
+
+
+extension RecoredVideoViewController : CountViewControllerDelegate {
+    func countViewControllerDidFinishCounting() {
+        countViewController.view.isHidden = true
+        textViewController.startMoving()
+        cameraViewController.startRecording()
+    }
+    
+    
+}
+
+extension RecoredVideoViewController : CameraViewControllerDelegate {
+    func cameraViewControllerNeedResetText() {
+        textViewController.reset()
+    }
+    
+    func cameraViewControllerStartLoading() {
+        loadingViewController.view.isHidden = false
+    }
+    
+    func cameraViewControllerEndLoading() {
+        loadingViewController.view.isHidden = true
+    }
     
     
 }

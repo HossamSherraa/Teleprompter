@@ -232,6 +232,8 @@ class ItemsViewControler : UIViewController {
             let scriptItem = try scriptsCache.getScriptItem(id: selectedHeader.id)
             let recordVideoController = RecoredVideoViewController()
            recordVideoController.scriptItem = scriptItem
+            recordVideoController.modalTransitionStyle = .crossDissolve
+            recordVideoController.modalPresentationStyle = .fullScreen
            self.present(recordVideoController, animated: true, completion: nil)}
         catch{
             presentErrorMessage(content: error.localizedDescription)
@@ -309,9 +311,9 @@ extension ItemsViewControler : ItemViewCellDelegate {
 }
 
 extension UIViewController{
-    func makeDicision(title : String , onYes : @escaping ()->Void) {
+    func makeDicision(title : String , onYes : @escaping ()->Void , onNo : @escaping (()->Void) = {}) {
         
-        let alert = UIAlertController(title: "Yes", message: title, preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: title, message: title, preferredStyle: UIAlertController.Style.alert)
         
         
         alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: {_ in
@@ -320,6 +322,7 @@ extension UIViewController{
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: {_ in
             alert.dismiss(animated: true, completion: nil)
+            onNo()
         }))
         
         

@@ -7,7 +7,17 @@
 
 import UIKit
 enum RecoredSize {
-    case post , story , square
+    case post
+    case story
+    case square
+    
+    var aspect : Aspect {
+        switch self {
+        case .post :  return .init(width: 3, height: 4)
+        case .square : return .init(width: 1, height: 1)
+        case .story : return .init(width: 9, height: 16)
+        }
+    }
 }
 protocol ControlPanelDelegate : AnyObject {
     func didChangeFontSize(newValue : Float)
@@ -51,7 +61,10 @@ class ControlPanelViewController : UIViewController {
         }else {
             isRecording = true
             delegate?.onPressRecored()
-            sender.setImage(UIImage(named: "telep_video_stop"), for: .normal)
+            Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
+                
+               sender.setImage(UIImage(named: "telep_video_stop"), for: .normal)
+            }
         }
         
     }

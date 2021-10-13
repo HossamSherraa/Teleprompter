@@ -31,7 +31,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCV-xr-tzR">
                                                     <rect key="frame" x="21" y="16" width="333" height="92"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvE-g6-DcF">
+                                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvE-g6-DcF">
                                                             <rect key="frame" x="271" y="15" width="42" height="62"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="62" id="UjH-n9-rE1"/>
@@ -41,9 +41,6 @@
                                                             <state key="normal" image="tele_edit_item">
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="ultraLight"/>
                                                             </state>
-                                                            <buttonConfiguration key="configuration" style="plain" image="Group 8">
-                                                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="ultraLight"/>
-                                                            </buttonConfiguration>
                                                             <connections>
                                                                 <action selector="onPressMenu:" destination="Qep-hm-YvW" eventType="touchUpInside" id="g0Y-Dt-nPw"/>
                                                             </connections>
@@ -134,13 +131,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xn0-7b-ECX">
-                                <rect key="frame" x="-19.5" y="126.5" width="414" height="414"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xn0-7b-ECX">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="414" id="OLc-p7-0bo"/>
-                                    <constraint firstAttribute="width" constant="414" id="ScT-IG-md6"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e0r-Dd-WRd"/>
@@ -156,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pSK-Jm-NC3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.037383177570092" y="739.95680345572362"/>
+            <point key="canvasLocation" x="28" y="739.88005997001505"/>
         </scene>
         <!--Text View Controller-->
         <scene sceneID="sS9-Dx-Jqe">
@@ -169,7 +162,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOt-Oj-Gnf">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -580,11 +573,93 @@
             </objects>
             <point key="canvasLocation" x="711.59420289855075" y="87.723214285714278"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="TNz-Fv-zHl">
+            <objects>
+                <viewController storyboardIdentifier="LoadingViewController" id="w1I-wv-cFt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X1D-zk-hTC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ih2-O1-8JS">
+                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Xg3-rI-wlx">
+                                        <rect key="frame" x="31.5" y="31.5" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Xg3-rI-wlx" firstAttribute="centerX" secondItem="ih2-O1-8JS" secondAttribute="centerX" id="1Ke-qX-w9f"/>
+                                    <constraint firstAttribute="width" constant="100" id="3ZB-01-nhZ"/>
+                                    <constraint firstAttribute="height" constant="100" id="90V-jj-STd"/>
+                                    <constraint firstItem="Xg3-rI-wlx" firstAttribute="centerY" secondItem="ih2-O1-8JS" secondAttribute="centerY" id="LBV-Km-QIL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="krq-zD-oA9"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.22323764898838142" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ih2-O1-8JS" firstAttribute="centerY" secondItem="X1D-zk-hTC" secondAttribute="centerY" id="ZoL-bl-Rxn"/>
+                            <constraint firstItem="ih2-O1-8JS" firstAttribute="centerX" secondItem="X1D-zk-hTC" secondAttribute="centerX" id="hk2-gC-BRo"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xib-fX-xZv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1386.4000000000001" y="58.920539730134934"/>
+        </scene>
+        <!--Count View Controller-->
+        <scene sceneID="LxN-1l-19K">
+            <objects>
+                <viewController restorationIdentifier="CountViewController" storyboardIdentifier="CountViewController" id="Azk-pa-6tR" customClass="CountViewController" customModule="Teleprompter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lkP-7z-fH2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oval" translatesAutoresizingMaskIntoConstraints="NO" id="jju-k0-dP6">
+                                <rect key="frame" x="56.5" y="202.5" width="262.5" height="262.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jju-k0-dP6" secondAttribute="height" multiplier="1:1" id="bEX-Zq-CI8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BE-hM-LAq">
+                                <rect key="frame" x="145.5" y="226" width="84" height="215"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="180"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cMN-RO-drK"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.21050008138020834" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="1BE-hM-LAq" firstAttribute="centerY" secondItem="lkP-7z-fH2" secondAttribute="centerY" id="4kO-mc-hiK"/>
+                            <constraint firstItem="jju-k0-dP6" firstAttribute="width" secondItem="lkP-7z-fH2" secondAttribute="width" multiplier="0.7" id="8Tc-z6-aQh"/>
+                            <constraint firstItem="jju-k0-dP6" firstAttribute="centerX" secondItem="cMN-RO-drK" secondAttribute="centerX" id="9H4-aS-FUY"/>
+                            <constraint firstItem="1BE-hM-LAq" firstAttribute="centerX" secondItem="lkP-7z-fH2" secondAttribute="centerX" id="HKA-Ku-f63"/>
+                            <constraint firstItem="jju-k0-dP6" firstAttribute="centerY" secondItem="lkP-7z-fH2" secondAttribute="centerY" id="M1D-Ko-3Qb"/>
+                            <constraint firstItem="jju-k0-dP6" firstAttribute="centerY" secondItem="cMN-RO-drK" secondAttribute="centerY" id="W3R-xv-K2s"/>
+                            <constraint firstItem="jju-k0-dP6" firstAttribute="centerX" secondItem="lkP-7z-fH2" secondAttribute="centerX" id="aRD-Xv-siA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countLabelView" destination="1BE-hM-LAq" id="Brd-qI-rgI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ID7-OS-Szc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2029.5999999999999" y="58.920539730134934"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="Group 8" width="5" height="25"/>
+        <image name="Oval" width="695" height="695"/>
         <image name="tele_Add" width="112" height="114"/>
-        <image name="tele_edit_item" width="11" height="59"/>
+        <image name="tele_edit_item" width="5" height="25"/>
         <image name="tele_script_item" width="96" height="96"/>
         <image name="telep_size" width="100" height="100"/>
         <image name="telep_speed" width="100" height="100"/>

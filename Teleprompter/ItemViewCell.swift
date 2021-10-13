@@ -28,4 +28,6 @@ class ItemViewCell : UITableViewCell {
     public func setTitle(text : String){
         self.itemTitle.text = text
     }
+    
+    
 }

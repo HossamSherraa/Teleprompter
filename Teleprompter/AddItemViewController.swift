@@ -114,6 +114,8 @@ class AddItemViewController : UIViewController {
         self.titleTextField.text = scriptItem.scriptTitle
         self.scriptItem = scriptItem
         updateTitleCount(scriptItem.scriptTitle)
+        setTitleTextCount()
+            
         }
     }
     

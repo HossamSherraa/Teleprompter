@@ -29,11 +29,11 @@ struct Aspect {
 protocol CaptureSessionManagerDelegate : AnyObject {
     func didCompleteRecordingAt(url : URL)
 }
+var globalAspect : Aspect = RecoredSize.square.aspect
 class CaptureSessionManager : NSObject , AVCaptureFileOutputRecordingDelegate{
-    private var aspect : Aspect?
     
     weak var delegate : CaptureSessionManagerDelegate?
-   lazy var  movieRecorder : MovieRecorder = MovieRecorder(exportURL: tempLinkURL, delegate: self)
+    lazy var  movieRecorder : MovieRecorder = MovieRecorder(exportURL: tempLinkURL, delegate: self)
     let composer = MovieComposer()
     
     var tempLinkURL : URL =  {
@@ -46,19 +46,21 @@ class CaptureSessionManager : NSObject , AVCaptureFileOutputRecordingDelegate{
     
     
     
-   
+    
     
     func startRecordingAt(aspect : Aspect){
-        self.aspect = aspect
+        globalAspect = aspect
         movieRecorder.startRecording()
     }
     
     func stopRecording(){
+        
         movieRecorder.endRecording()
     }
     
     
     func getPreviewLayer()->AVCaptureVideoPreviewLayer {
+        
         let layer = AVCaptureVideoPreviewLayer(session: movieRecorder.session)
         layer.videoGravity = .resizeAspectFill
         return layer
@@ -67,96 +69,189 @@ class CaptureSessionManager : NSObject , AVCaptureFileOutputRecordingDelegate{
     
     
     func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
-      
-        //SaveToPhotos
-        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0] as URL
-        let filePath = documentsDirectory.appendingPathComponent("r\(Date().description).mov")
-        guard let aspect = self.aspect else {return}
-        composer.addVideo(outputFileURL, aspect: aspect)
-        let exportSession = composer.readyToComposeVideo(filePath)
-        exportSession?.exportAsynchronously {
+        
+        if MovieRecorder.isVideoShouldBeSaved {
+            //SaveToPhotos
+            let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0] as URL
+            let filePath = documentsDirectory.appendingPathComponent("r\(Date().description).mov")
             
-            PHPhotoLibrary.shared().performChanges({
-                PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: filePath)
-            }) { saved, error in
-                if saved {
-                    self.delegate?.didCompleteRecordingAt(url: filePath)
-                    let fetchOptions = PHFetchOptions()
-                    fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
-                    
+            composer.addVideo(outputFileURL, aspect: globalAspect)
+            let exportSession = composer.readyToComposeVideo(filePath)
+            exportSession?.exportAsynchronously {
+                
+                PHPhotoLibrary.shared().performChanges({
+                    PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: filePath)
+                }) { saved, error in
+                    if saved {
+                        self.delegate?.didCompleteRecordingAt(url: filePath)
+                        let fetchOptions = PHFetchOptions()
+                        fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+                        
+                    }
                 }
             }
+            
         }
-        
     }
     
     
 }
+protocol CameraViewControllerDelegate : AnyObject{
+    func cameraViewControllerStartLoading()
+    func cameraViewControllerEndLoading()
+    func cameraViewControllerNeedResetText()
+}
 class CameraViewController : UIViewController , CaptureSessionManagerDelegate {
-    var isRecording : Bool = false
-    @IBOutlet weak var previewView: UIView!
-    var captureSessionManager : CaptureSessionManager = CaptureSessionManager()
+    weak var delegate : CameraViewControllerDelegate?
+    private var isRecording : Bool = false
+    @IBOutlet private weak var previewView: UIView!
+    private var captureSessionManager : CaptureSessionManager = CaptureSessionManager()
+    private var  previewLayer : AVCaptureVideoPreviewLayer?
     
-    var  previewLayer : AVCaptureVideoPreviewLayer?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         captureSessionManager.delegate = self
         configPreviewView()
+        
     }
     
-    func configPreviewView(){
-       let previewLayer =  captureSessionManager.getPreviewLayer()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        resetSession()
+    }
+    private  func configPreviewView(){
+        let previewLayer =  captureSessionManager.getPreviewLayer()
         
         self.previewView.layer.addSublayer(previewLayer)
         self.previewLayer = previewLayer
+        self.previewView.backgroundColor = .black
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.previewLayer?.frame = previewView.bounds
+        setConstraintsHeightFor(aspect: globalAspect)
         
         self.previewLayer?.connection?.videoOrientation = UIDevice.current.orientation.videoOrientation
+        
     }
     
     func startRecording(){
-      
+        
         //manager.startRecording(completion :@escaping (URL)->Void)
-      isRecording = true
-        captureSessionManager.startRecordingAt(aspect: .init(width: 1, height: 1))
-       
+        isRecording = true
+        captureSessionManager.startRecordingAt(aspect: globalAspect)
+        
+        
     }
     
     func stopRecording(){
         isRecording = false
-        captureSessionManager.stopRecording()
+        
+        
+        
+        makeDicision(title: "Use This Video?") { [weak self] in
+            MovieRecorder.isVideoShouldBeSaved = true
+            self?.captureSessionManager.stopRecording()
+            self?.delegate?.cameraViewControllerStartLoading()
+            
+        } onNo: { [weak self ] in
+            MovieRecorder.isVideoShouldBeSaved = false
+            self?.captureSessionManager.stopRecording()
+            self?.delegate?.cameraViewControllerNeedResetText()
+            
+        }
+        
         
     }
     
     
     internal func didCompleteRecordingAt(url : URL) {
-        DispatchQueue.main.async {
-                     let player = AVPlayer(url: url)
-                     let vc = AVPlayerViewController()
-                     vc.player = player
-     
-                     self.present(vc, animated: true) {
-                         vc.player?.play()
-//                        self.resetSession()
-                        
-                     }
-                 }
+        self.resetSession()
+        DispatchQueue.main.async {[weak self] in
+            guard let self = self else {return}
+            let player = AVPlayer(url: url)
+            let vc = AVPlayerViewController()
+            vc.player = player
+            self.delegate?.cameraViewControllerEndLoading()
+            self.present(vc, animated: true) {
+                vc.player?.play()
+                
+                
+            }
+        }
+        
+        
+        
     }
-    func resetSession(){
-        DispatchQueue.main.async {
-        self.captureSessionManager = CaptureSessionManager()
-        self.captureSessionManager.delegate = self
-            self.previewLayer = self.captureSessionManager.getPreviewLayer()
-            self.previewView.layoutIfNeeded()
+    private func resetSession(){
+        captureSessionManager.movieRecorder.session.stopRunning()
+        let newCaptureSessionManager = CaptureSessionManager()
+        
+        newCaptureSessionManager.delegate = self
+        self.previewLayer?.removeFromSuperlayer()
+        self.previewLayer = newCaptureSessionManager.getPreviewLayer()
+        self.captureSessionManager = newCaptureSessionManager
+        
+        self.previewView.layer.addSublayer(self.previewLayer!)
+        self.previewLayer?.frame = self.previewView.bounds
+        DispatchQueue.main.async { [weak self ] in
+            
+            self?.previewView.layoutIfNeeded()
+            self?.previewLayer?.connection?.videoOrientation = UIDevice.current.orientation.videoOrientation
+            
+            self?.setConstraintsHeightFor(aspect: globalAspect)
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    var widthConstraints : NSLayoutConstraint?
+    var heightConstraints : NSLayoutConstraint?
+    
+    private   func setConstraintsHeightFor(aspect : Aspect){
+        widthConstraints?.isActive = false
+        heightConstraints?.isActive = false
+        print(UIDevice.current.orientation.rawValue)
+        if view.frame.width < view.frame.height { //Port
+            self.widthConstraints = self.previewView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.minimumSized)
+            self.heightConstraints = self.previewView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.minimumSized * aspect.aspectRatio)
+            
+        }
+        else {
+            self.widthConstraints = self.previewView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.minimumSized * aspect.aspectRatio)
+            self.heightConstraints = self.previewView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.minimumSized )
+            
+            
+        }
+        widthConstraints?.isActive = true
+        heightConstraints?.isActive = true
+        
+        self.view.superview?.layoutIfNeeded()
+        self.previewLayer?.frame = self.previewView.bounds
+    }
+    
+    func setAspect(_ aspect : Aspect){
+        globalAspect = aspect
+        setConstraintsHeightFor(aspect: aspect)
+    }
+    
+}
 
+extension CGRect {
+    var minimumSized : CGFloat {
+        if width > height {
+            return height
+        }else {
+            return width
         }
     }
-    
-    
-
 }
