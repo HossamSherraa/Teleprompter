@@ -1,16 +1,3 @@
-PODS:
-  - CameraKit-iOS (1.2.1)
-
-DEPENDENCIES:
-  - CameraKit-iOS (~> 1.2.1)
-
-SPEC REPOS:
-  trunk:
-    - CameraKit-iOS
-
-SPEC CHECKSUMS:
-  CameraKit-iOS: 7a8aeb4b6ac93c59088ada934efb6010ed2394c1
-
-PODFILE CHECKSUM: 632f5fc693d3d0b621a92541a8e720523f96d8ac
+PODFILE CHECKSUM: b8aab68132f6fed8cb6adc180817e83c724be002
 
 COCOAPODS: 1.11.2

@@ -3,68 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C795689DDBF15C4AE6F4E07EEC881AC /* CameraKit-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78645B5F2FF10E0317B2466AF17F139C /* CameraKit-iOS-dummy.m */; };
-		0C960464951DF01D72DDC1253C167B95 /* Pods-Teleprompter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 412A412828C78AD2492AC4DD2A0F6677 /* Pods-Teleprompter-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		39117A181D438CAD57199AC8F56D6132 /* CKFVideoSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25639656D42D9FC0B0F7E65D58E943C6 /* CKFVideoSession.swift */; };
-		59B18BCBFE2E24668499FC2ACCE12932 /* CKFPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D1176C89FA741DC3D0EAC5E0A34131 /* CKFPreviewView.swift */; };
-		5D29232DFB165300C58C013E4F1CB252 /* CKFUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21510E88CA40A0DB5B15E54D633BAD97 /* CKFUtils.swift */; };
-		8775088958475C62966D3F220A436ABE /* CKFPhotoSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B54C70B4C3F2D24123FA11D4FDCE9B9 /* CKFPhotoSession.swift */; };
-		A5C896FEB21389C9991351CE649F02DD /* CKFGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E924AD0F6716C08C32BC764EC55EA6 /* CKFGridView.swift */; };
-		BA51B40543836F4B480277CC2C52C9A2 /* CKFSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6AA2483ECD08390D7B73A8E9A79B8B /* CKFSession.swift */; };
-		C55CEAC96BC96FB793F0A79C931CC4D5 /* CameraKit-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D82A519F8FB93DACA309E537488B846D /* CameraKit-iOS-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DD1E7282B100227278D38C680B5C1E11 /* CKFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6583A9CED7E46129FD9882D9CF24E97 /* CKFError.swift */; };
-		DF5FB48779638A3A126A1C8866317DAE /* Pods-Teleprompter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2067655714F767C5222A30A5357A33 /* Pods-Teleprompter-dummy.m */; };
+		1370CB6EB1B834F6C1F6AA7106CC67D8 /* Pods-TeleprompterTests_-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2DA042A9EBAF0522ABC8800E94E203 /* Pods-TeleprompterTests_-dummy.m */; };
+		5FD4B8922AE783E1CC406CC59931B4EA /* Pods-Teleprompter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FFF82CC1B47BC11442C7A0D1121710 /* Pods-Teleprompter-dummy.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		08C7565F516939C03CC4C8346293882F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B4EF47FEED3C3CEAF89306D1AE3851CB;
-			remoteInfo = "CameraKit-iOS";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		1DAD17DE221A72A588A8547AFCA1050F /* CameraKit-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "CameraKit-iOS.modulemap"; sourceTree = "<group>"; };
-		21510E88CA40A0DB5B15E54D633BAD97 /* CKFUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CKFUtils.swift; path = CameraKit/CameraKit/CKFUtils.swift; sourceTree = "<group>"; };
-		25639656D42D9FC0B0F7E65D58E943C6 /* CKFVideoSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CKFVideoSession.swift; path = CameraKit/CameraKit/CKFVideoSession.swift; sourceTree = "<group>"; };
-		322BEB792900F1548E12B2B243A26AFD /* CameraKit-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CameraKit-iOS-prefix.pch"; sourceTree = "<group>"; };
-		412A412828C78AD2492AC4DD2A0F6677 /* Pods-Teleprompter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Teleprompter-umbrella.h"; sourceTree = "<group>"; };
-		45E924AD0F6716C08C32BC764EC55EA6 /* CKFGridView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CKFGridView.swift; path = CameraKit/CameraKit/CKFGridView.swift; sourceTree = "<group>"; };
-		4B3023F8BEE94F1A99B48ACE282290EB /* Pods-Teleprompter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Teleprompter.release.xcconfig"; sourceTree = "<group>"; };
-		4F2067655714F767C5222A30A5357A33 /* Pods-Teleprompter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Teleprompter-dummy.m"; sourceTree = "<group>"; };
-		62B23374B5AB8306391C13B2C086F0E6 /* Pods-Teleprompter-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Teleprompter-acknowledgements.markdown"; sourceTree = "<group>"; };
-		68F7BD9DF56382D783CFCBB2F5427563 /* Pods-Teleprompter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Teleprompter.modulemap"; sourceTree = "<group>"; };
-		6B54C70B4C3F2D24123FA11D4FDCE9B9 /* CKFPhotoSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CKFPhotoSession.swift; path = CameraKit/CameraKit/CKFPhotoSession.swift; sourceTree = "<group>"; };
-		78645B5F2FF10E0317B2466AF17F139C /* CameraKit-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CameraKit-iOS-dummy.m"; sourceTree = "<group>"; };
-		80013FE04CF305B7C1CF5B02AD3FBC66 /* CameraKit-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "CameraKit-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		8B68B8637937121E3926BFF6291A5400 /* CameraKit-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "CameraKit-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A5D1176C89FA741DC3D0EAC5E0A34131 /* CKFPreviewView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CKFPreviewView.swift; path = CameraKit/CameraKit/CKFPreviewView.swift; sourceTree = "<group>"; };
-		BC6AA2483ECD08390D7B73A8E9A79B8B /* CKFSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CKFSession.swift; path = CameraKit/CameraKit/CKFSession.swift; sourceTree = "<group>"; };
+		0D6B22CB14345392E60ED738CB799B43 /* Pods-Teleprompter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Teleprompter.release.xcconfig"; sourceTree = "<group>"; };
+		17FFF82CC1B47BC11442C7A0D1121710 /* Pods-Teleprompter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Teleprompter-dummy.m"; sourceTree = "<group>"; };
+		275FB230203068D465F59536543B1235 /* Pods-TeleprompterTests_ */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-TeleprompterTests_"; path = "libPods-TeleprompterTests_.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C2DA042A9EBAF0522ABC8800E94E203 /* Pods-TeleprompterTests_-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TeleprompterTests_-dummy.m"; sourceTree = "<group>"; };
+		57E3DB83959218900E48664A35C54BD6 /* Pods-Teleprompter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Teleprompter.debug.xcconfig"; sourceTree = "<group>"; };
+		617713FAACE0F0575494A1EA473FA84B /* Pods-TeleprompterTests_-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TeleprompterTests_-acknowledgements.plist"; sourceTree = "<group>"; };
+		6AF399575E503A558CA177C9F188BA58 /* Pods-TeleprompterTests_-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TeleprompterTests_-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8229C50BB6A1003D33684798892CC1CE /* Pods-Teleprompter-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Teleprompter-acknowledgements.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0C8BDFEB57072C56E347A0AF329C27A /* Pods-Teleprompter-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Teleprompter-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B664C5DD130C315B51F076C6407D821D /* Pods-TeleprompterTests_.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TeleprompterTests_.release.xcconfig"; sourceTree = "<group>"; };
 		CC12AC24240E4AE7E88BAC3025AEB909 /* Pods-Teleprompter */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-Teleprompter"; path = "libPods-Teleprompter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6583A9CED7E46129FD9882D9CF24E97 /* CKFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CKFError.swift; path = CameraKit/CameraKit/CKFError.swift; sourceTree = "<group>"; };
-		D82A519F8FB93DACA309E537488B846D /* CameraKit-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CameraKit-iOS-umbrella.h"; sourceTree = "<group>"; };
-		EDCC6F0F2451065D8DDFE6309C252D13 /* Pods-Teleprompter-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Teleprompter-acknowledgements.plist"; sourceTree = "<group>"; };
-		F20D0F475AD94970E52A96B1F84EC209 /* CameraKit-iOS */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "CameraKit-iOS"; path = "libCameraKit-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8C609778887EDE6165892028E2EC974 /* Pods-Teleprompter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Teleprompter.debug.xcconfig"; sourceTree = "<group>"; };
+		D8497F5A4EE0BF3A392F109CE5FC0033 /* Pods-TeleprompterTests_.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TeleprompterTests_.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		288049ECA6391C42AF1DB3EC9A81ABCB /* Frameworks */ = {
+		0CE82BCADF9B1FB3268E7E563C2BF56D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2AFFF297C2BAD358F43222A275704F31 /* Frameworks */ = {
+		3CB8F6224A13AD5D519A2167248F8999 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,70 +45,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0DCFEEC8C293A8D49904D88ED82F7F9E /* Targets Support Files */ = {
+		3040D7C669BEBFE33059DAC428CE9E2D /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				AA895D929C4FA6D12FA87DF35A0755F3 /* Pods-Teleprompter */,
+				C336F6162A4331E554D09EA65132CB7D /* Pods-Teleprompter */,
+				DF3E7F16B5881AD19649C64A4BC998F6 /* Pods-TeleprompterTests_ */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		3E034172FC893B42B7F01D513DEBAE5B /* Products */ = {
+		3628413400C303D7F21F57103B6CAB76 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F20D0F475AD94970E52A96B1F84EC209 /* CameraKit-iOS */,
 				CC12AC24240E4AE7E88BAC3025AEB909 /* Pods-Teleprompter */,
+				275FB230203068D465F59536543B1235 /* Pods-TeleprompterTests_ */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4655EF0061940C991404B543EF6CDEAD /* Support Files */ = {
+		C336F6162A4331E554D09EA65132CB7D /* Pods-Teleprompter */ = {
 			isa = PBXGroup;
 			children = (
-				1DAD17DE221A72A588A8547AFCA1050F /* CameraKit-iOS.modulemap */,
-				78645B5F2FF10E0317B2466AF17F139C /* CameraKit-iOS-dummy.m */,
-				322BEB792900F1548E12B2B243A26AFD /* CameraKit-iOS-prefix.pch */,
-				D82A519F8FB93DACA309E537488B846D /* CameraKit-iOS-umbrella.h */,
-				80013FE04CF305B7C1CF5B02AD3FBC66 /* CameraKit-iOS.debug.xcconfig */,
-				8B68B8637937121E3926BFF6291A5400 /* CameraKit-iOS.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/CameraKit-iOS";
-			sourceTree = "<group>";
-		};
-		8FBD7D4ECB1FB24BE5D58887E0DC43D2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A181ED1F586958EC97AC5484FBB0E6C1 /* CameraKit-iOS */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		A181ED1F586958EC97AC5484FBB0E6C1 /* CameraKit-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				D6583A9CED7E46129FD9882D9CF24E97 /* CKFError.swift */,
-				45E924AD0F6716C08C32BC764EC55EA6 /* CKFGridView.swift */,
-				6B54C70B4C3F2D24123FA11D4FDCE9B9 /* CKFPhotoSession.swift */,
-				A5D1176C89FA741DC3D0EAC5E0A34131 /* CKFPreviewView.swift */,
-				BC6AA2483ECD08390D7B73A8E9A79B8B /* CKFSession.swift */,
-				21510E88CA40A0DB5B15E54D633BAD97 /* CKFUtils.swift */,
-				25639656D42D9FC0B0F7E65D58E943C6 /* CKFVideoSession.swift */,
-				4655EF0061940C991404B543EF6CDEAD /* Support Files */,
-			);
-			path = "CameraKit-iOS";
-			sourceTree = "<group>";
-		};
-		AA895D929C4FA6D12FA87DF35A0755F3 /* Pods-Teleprompter */ = {
-			isa = PBXGroup;
-			children = (
-				68F7BD9DF56382D783CFCBB2F5427563 /* Pods-Teleprompter.modulemap */,
-				62B23374B5AB8306391C13B2C086F0E6 /* Pods-Teleprompter-acknowledgements.markdown */,
-				EDCC6F0F2451065D8DDFE6309C252D13 /* Pods-Teleprompter-acknowledgements.plist */,
-				4F2067655714F767C5222A30A5357A33 /* Pods-Teleprompter-dummy.m */,
-				412A412828C78AD2492AC4DD2A0F6677 /* Pods-Teleprompter-umbrella.h */,
-				F8C609778887EDE6165892028E2EC974 /* Pods-Teleprompter.debug.xcconfig */,
-				4B3023F8BEE94F1A99B48ACE282290EB /* Pods-Teleprompter.release.xcconfig */,
+				A0C8BDFEB57072C56E347A0AF329C27A /* Pods-Teleprompter-acknowledgements.markdown */,
+				8229C50BB6A1003D33684798892CC1CE /* Pods-Teleprompter-acknowledgements.plist */,
+				17FFF82CC1B47BC11442C7A0D1121710 /* Pods-Teleprompter-dummy.m */,
+				57E3DB83959218900E48664A35C54BD6 /* Pods-Teleprompter.debug.xcconfig */,
+				0D6B22CB14345392E60ED738CB799B43 /* Pods-Teleprompter.release.xcconfig */,
 			);
 			name = "Pods-Teleprompter";
 			path = "Target Support Files/Pods-Teleprompter";
@@ -148,9 +81,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				8FBD7D4ECB1FB24BE5D58887E0DC43D2 /* Pods */,
-				3E034172FC893B42B7F01D513DEBAE5B /* Products */,
-				0DCFEEC8C293A8D49904D88ED82F7F9E /* Targets Support Files */,
+				3628413400C303D7F21F57103B6CAB76 /* Products */,
+				3040D7C669BEBFE33059DAC428CE9E2D /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,62 +93,71 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DF3E7F16B5881AD19649C64A4BC998F6 /* Pods-TeleprompterTests_ */ = {
+			isa = PBXGroup;
+			children = (
+				6AF399575E503A558CA177C9F188BA58 /* Pods-TeleprompterTests_-acknowledgements.markdown */,
+				617713FAACE0F0575494A1EA473FA84B /* Pods-TeleprompterTests_-acknowledgements.plist */,
+				3C2DA042A9EBAF0522ABC8800E94E203 /* Pods-TeleprompterTests_-dummy.m */,
+				D8497F5A4EE0BF3A392F109CE5FC0033 /* Pods-TeleprompterTests_.debug.xcconfig */,
+				B664C5DD130C315B51F076C6407D821D /* Pods-TeleprompterTests_.release.xcconfig */,
+			);
+			name = "Pods-TeleprompterTests_";
+			path = "Target Support Files/Pods-TeleprompterTests_";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		5124E0BC74FBBEF75B26F1EA99D5AD62 /* Headers */ = {
+		0B58AD14DF60EBC1F69F826F387EB9F3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C55CEAC96BC96FB793F0A79C931CC4D5 /* CameraKit-iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C30AA9EDD0B29CBF76483FEF4AC0315A /* Headers */ = {
+		2770B5AA98527F6759A883449BDA0459 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C960464951DF01D72DDC1253C167B95 /* Pods-Teleprompter-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		202F377084C030A188ACBCF7B001DD74 /* Pods-Teleprompter */ = {
+		134F85188BE72EB3A1D68CFB0DBB77EF /* Pods-TeleprompterTests_ */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 54F52F6FAFA9827D4D00994D34CE4306 /* Build configuration list for PBXNativeTarget "Pods-Teleprompter" */;
+			buildConfigurationList = 919F1C8E94388E6F2DD5E96B2C5C8943 /* Build configuration list for PBXNativeTarget "Pods-TeleprompterTests_" */;
 			buildPhases = (
-				C30AA9EDD0B29CBF76483FEF4AC0315A /* Headers */,
-				03B176293F7A23E26296E9393832FCB1 /* Sources */,
-				2AFFF297C2BAD358F43222A275704F31 /* Frameworks */,
+				2770B5AA98527F6759A883449BDA0459 /* Headers */,
+				CB39E83B8CC96181B52BE7F30A33470E /* Sources */,
+				0CE82BCADF9B1FB3268E7E563C2BF56D /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C972181159E53D53BA97BDBDE3D30021 /* PBXTargetDependency */,
+			);
+			name = "Pods-TeleprompterTests_";
+			productName = "Pods-TeleprompterTests_";
+			productReference = 275FB230203068D465F59536543B1235 /* Pods-TeleprompterTests_ */;
+			productType = "com.apple.product-type.library.static";
+		};
+		202F377084C030A188ACBCF7B001DD74 /* Pods-Teleprompter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62E52575DCF90E5CA94DB38372B07C7D /* Build configuration list for PBXNativeTarget "Pods-Teleprompter" */;
+			buildPhases = (
+				0B58AD14DF60EBC1F69F826F387EB9F3 /* Headers */,
+				FDE1EB408CD5E935365E8F933A006498 /* Sources */,
+				3CB8F6224A13AD5D519A2167248F8999 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
 			);
 			name = "Pods-Teleprompter";
 			productName = "Pods-Teleprompter";
 			productReference = CC12AC24240E4AE7E88BAC3025AEB909 /* Pods-Teleprompter */;
-			productType = "com.apple.product-type.library.static";
-		};
-		B4EF47FEED3C3CEAF89306D1AE3851CB /* CameraKit-iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3A657F3C4CE8929EE8E77078AB304094 /* Build configuration list for PBXNativeTarget "CameraKit-iOS" */;
-			buildPhases = (
-				5124E0BC74FBBEF75B26F1EA99D5AD62 /* Headers */,
-				5AE441B7BCC685004C322ED8AEDFBEA9 /* Sources */,
-				288049ECA6391C42AF1DB3EC9A81ABCB /* Frameworks */,
-				D2FE9A27CF8ADF32DA594864A89F8069 /* Copy generated compatibility header */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "CameraKit-iOS";
-			productName = "CameraKit-iOS";
-			productReference = F20D0F475AD94970E52A96B1F84EC209 /* CameraKit-iOS */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -225,11 +166,11 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -237,133 +178,39 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 3E034172FC893B42B7F01D513DEBAE5B /* Products */;
+			productRefGroup = 3628413400C303D7F21F57103B6CAB76 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B4EF47FEED3C3CEAF89306D1AE3851CB /* CameraKit-iOS */,
 				202F377084C030A188ACBCF7B001DD74 /* Pods-Teleprompter */,
+				134F85188BE72EB3A1D68CFB0DBB77EF /* Pods-TeleprompterTests_ */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		D2FE9A27CF8ADF32DA594864A89F8069 /* Copy generated compatibility header */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
-				"${PODS_ROOT}/Headers/Public/CameraKit_iOS/CameraKit-iOS.modulemap",
-				"${PODS_ROOT}/Headers/Public/CameraKit_iOS/CameraKit-iOS-umbrella.h",
-			);
-			name = "Copy generated compatibility header";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
-				"${BUILT_PRODUCTS_DIR}/CameraKit-iOS-umbrella.h",
-				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/CameraKit_iOS/CameraKit-iOS.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/CameraKit_iOS/CameraKit-iOS-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		03B176293F7A23E26296E9393832FCB1 /* Sources */ = {
+		CB39E83B8CC96181B52BE7F30A33470E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF5FB48779638A3A126A1C8866317DAE /* Pods-Teleprompter-dummy.m in Sources */,
+				1370CB6EB1B834F6C1F6AA7106CC67D8 /* Pods-TeleprompterTests_-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5AE441B7BCC685004C322ED8AEDFBEA9 /* Sources */ = {
+		FDE1EB408CD5E935365E8F933A006498 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C795689DDBF15C4AE6F4E07EEC881AC /* CameraKit-iOS-dummy.m in Sources */,
-				DD1E7282B100227278D38C680B5C1E11 /* CKFError.swift in Sources */,
-				A5C896FEB21389C9991351CE649F02DD /* CKFGridView.swift in Sources */,
-				8775088958475C62966D3F220A436ABE /* CKFPhotoSession.swift in Sources */,
-				59B18BCBFE2E24668499FC2ACCE12932 /* CKFPreviewView.swift in Sources */,
-				BA51B40543836F4B480277CC2C52C9A2 /* CKFSession.swift in Sources */,
-				5D29232DFB165300C58C013E4F1CB252 /* CKFUtils.swift in Sources */,
-				39117A181D438CAD57199AC8F56D6132 /* CKFVideoSession.swift in Sources */,
+				5FD4B8922AE783E1CC406CC59931B4EA /* Pods-Teleprompter-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		C972181159E53D53BA97BDBDE3D30021 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "CameraKit-iOS";
-			target = B4EF47FEED3C3CEAF89306D1AE3851CB /* CameraKit-iOS */;
-			targetProxy = 08C7565F516939C03CC4C8346293882F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		1261CF1DB3D8ABF931F6D138A1605ACC /* Release */ = {
+		53B330D0FB8D2F14E933BB2008656058 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B68B8637937121E3926BFF6291A5400 /* CameraKit-iOS.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/CameraKit-iOS/CameraKit-iOS-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MODULEMAP_FILE = "Headers/Public/CameraKit_iOS/CameraKit-iOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = CameraKit_iOS;
-				PRODUCT_NAME = "CameraKit-iOS";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		2627BD38D54CCAFAF1789EBEF2741E05 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80013FE04CF305B7C1CF5B02AD3FBC66 /* CameraKit-iOS.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/CameraKit-iOS/CameraKit-iOS-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MODULEMAP_FILE = "Headers/Public/CameraKit_iOS/CameraKit-iOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = CameraKit_iOS;
-				PRODUCT_NAME = "CameraKit-iOS";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		4903E2CA8FB889F7306FACC1C67ACF7A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B3023F8BEE94F1A99B48ACE282290EB /* Pods-Teleprompter.release.xcconfig */;
+			baseConfigurationReference = 0D6B22CB14345392E60ED738CB799B43 /* Pods-Teleprompter.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -372,7 +219,6 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Teleprompter/Pods-Teleprompter.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -384,9 +230,9 @@
 			};
 			name = Release;
 		};
-		B66F7251DA791F793B811C8214E399F9 /* Debug */ = {
+		9AC2D41BF3F4EC649BA1AC1A7055210C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8C609778887EDE6165892028E2EC974 /* Pods-Teleprompter.debug.xcconfig */;
+			baseConfigurationReference = 57E3DB83959218900E48664A35C54BD6 /* Pods-Teleprompter.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -395,7 +241,27 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Teleprompter/Pods-Teleprompter.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A365E08AC0CD9F8979B85DF174684D2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8497F5A4EE0BF3A392F109CE5FC0033 /* Pods-TeleprompterTests_.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -534,18 +400,31 @@
 			};
 			name = Release;
 		};
+		DED50C0FDC5B59EE492E5C8CF3E60635 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B664C5DD130C315B51F076C6407D821D /* Pods-TeleprompterTests_.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3A657F3C4CE8929EE8E77078AB304094 /* Build configuration list for PBXNativeTarget "CameraKit-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2627BD38D54CCAFAF1789EBEF2741E05 /* Debug */,
-				1261CF1DB3D8ABF931F6D138A1605ACC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -555,11 +434,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54F52F6FAFA9827D4D00994D34CE4306 /* Build configuration list for PBXNativeTarget "Pods-Teleprompter" */ = {
+		62E52575DCF90E5CA94DB38372B07C7D /* Build configuration list for PBXNativeTarget "Pods-Teleprompter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B66F7251DA791F793B811C8214E399F9 /* Debug */,
-				4903E2CA8FB889F7306FACC1C67ACF7A /* Release */,
+				9AC2D41BF3F4EC649BA1AC1A7055210C /* Debug */,
+				53B330D0FB8D2F14E933BB2008656058 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		919F1C8E94388E6F2DD5E96B2C5C8943 /* Build configuration list for PBXNativeTarget "Pods-TeleprompterTests_" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A365E08AC0CD9F8979B85DF174684D2E /* Debug */,
+				DED50C0FDC5B59EE492E5C8CF3E60635 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -3,14 +3,14 @@
 
 target 'Teleprompter' do
 
- pod 'CameraKit-iOS' , '~> 1.2.1'
+ 
 
 
 end
 
 target 'TeleprompterTests_' do
 
- pod 'CameraKit-iOS' , '~> 1.2.1'
+
 
 
 end

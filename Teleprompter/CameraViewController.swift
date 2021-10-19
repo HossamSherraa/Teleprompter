@@ -15,7 +15,7 @@ import Photos
  func startRecored
  func stopRecoredu
  */
-import CameraKit_iOS
+
 
 struct Aspect {
     let width : Int
@@ -273,5 +273,21 @@ class VideoPlayerViewController : AVPlayerViewController {
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         .portrait
+    }
+}
+
+public extension UIDeviceOrientation {
+    
+    var videoOrientation: AVCaptureVideoOrientation {
+        switch UIDevice.current.orientation {
+        case .portraitUpsideDown:
+            return .portraitUpsideDown
+        case .landscapeLeft:
+            return .landscapeRight
+        case .landscapeRight:
+            return .landscapeLeft
+        default:
+            return .portrait
+        }
     }
 }
