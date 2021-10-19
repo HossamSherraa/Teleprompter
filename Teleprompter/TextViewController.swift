@@ -12,7 +12,7 @@ class TextViewController : UIViewController {
     @IBOutlet private weak var textView: UITextView!
     private (set) var isMoving : Bool = false
     
-    private let maxSpeedPerFrame  : Float = 6
+    private let maxSpeedPerFrame  : Float = 9
     private var precentage : Float  = 0.5
     
     

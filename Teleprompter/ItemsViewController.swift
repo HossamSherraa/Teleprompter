@@ -241,6 +241,9 @@ class ItemsViewControler : UIViewController {
     }
     
     
+    
+    
+    
 }
 
 
@@ -307,6 +310,8 @@ extension ItemsViewControler : ItemViewCellDelegate {
         self.present(alert, animated: true)
     }
     
+    
+   
     
 }
 

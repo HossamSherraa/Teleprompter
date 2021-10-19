@@ -439,10 +439,17 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="changeRecordSizeButton" destination="fbS-TQ-Eh5" id="7xQ-G8-JOF"/>
+                        <outlet property="changeSpeedButton" destination="uie-kh-kec" id="A6D-el-o80"/>
+                        <outlet property="changeTextSizeButton" destination="xtV-0R-lQk" id="ThV-gG-ZYc"/>
                         <outlet property="fontSizeLabel" destination="1XV-3T-doX" id="I76-5y-Czv"/>
                         <outlet property="fontSizeView" destination="7hs-gW-Zla" id="c2a-Z8-zSl"/>
+                        <outlet property="postButton" destination="pJf-Pg-5O5" id="joL-gX-0cy"/>
                         <outlet property="recordSizeView" destination="eeL-Kh-QBI" id="k9v-Hi-L3b"/>
                         <outlet property="speedSizeView" destination="PGc-mb-bPP" id="UI7-Yd-gab"/>
+                        <outlet property="squareButton" destination="ypV-f3-4cv" id="Isx-tf-g3K"/>
+                        <outlet property="storyButton" destination="t8S-EC-6yq" id="gMP-hP-s2d"/>
+                        <outlet property="videoRecordSizeButton" destination="fbS-TQ-Eh5" id="QGE-Lc-mvT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u2K-Z5-n8N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -628,8 +635,8 @@
                                     <constraint firstAttribute="width" secondItem="jju-k0-dP6" secondAttribute="height" multiplier="1:1" id="bEX-Zq-CI8"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BE-hM-LAq">
-                                <rect key="frame" x="145.5" y="226" width="84" height="215"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BE-hM-LAq">
+                                <rect key="frame" x="132" y="226" width="111" height="215"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="180"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>

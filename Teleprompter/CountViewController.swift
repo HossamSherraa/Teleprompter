@@ -11,7 +11,7 @@ protocol CountViewControllerDelegate :AnyObject{
     func countViewControllerDidFinishCounting()
 }
 class CountViewController : UIViewController {
-    private var value : Int = 1 {
+    private var value : Int = 3 {
         didSet {
             countLabelView.text = value.description
         }
@@ -22,11 +22,11 @@ class CountViewController : UIViewController {
     func start(){
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self ] timer in
             guard let self = self else {return}
-            self.value += 1
-            if self.value == 4 {
+            self.value -= 1
+            if self.value == 0 {
                 timer.invalidate()
                 self.delegate?.countViewControllerDidFinishCounting()
-                self.value = 1
+                self.value = 3
             }
         }
     }

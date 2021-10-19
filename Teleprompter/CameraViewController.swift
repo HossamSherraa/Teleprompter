@@ -173,13 +173,11 @@ class CameraViewController : UIViewController , CaptureSessionManagerDelegate {
         DispatchQueue.main.async {[weak self] in
             guard let self = self else {return}
             let player = AVPlayer(url: url)
-            let vc = AVPlayerViewController()
+            let vc = VideoPlayerViewController()
             vc.player = player
             self.delegate?.cameraViewControllerEndLoading()
             self.present(vc, animated: true) {
                 vc.player?.play()
-                
-                
             }
         }
         
@@ -244,6 +242,10 @@ class CameraViewController : UIViewController , CaptureSessionManagerDelegate {
         setConstraintsHeightFor(aspect: aspect)
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        .portrait
+    }
+    
 }
 
 extension CGRect {
@@ -253,5 +255,23 @@ extension CGRect {
         }else {
             return width
         }
+    }
+}
+
+
+class VideoPlayerViewController : AVPlayerViewController {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        isPlayingVideo = true
+        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        isPlayingVideo = false
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        .portrait
     }
 }

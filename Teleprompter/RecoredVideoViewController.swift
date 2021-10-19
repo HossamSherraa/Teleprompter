@@ -7,6 +7,7 @@
 
 import UIKit
 
+var isPlayingVideo : Bool = false
 class RecoredVideoViewController : UIViewController {
     var scriptItem : ScriptItem? = nil
     let cameraViewController = UIViewController.instantiateViewController(using: "CameraViewController", type: CameraViewController.self)
@@ -27,6 +28,8 @@ class RecoredVideoViewController : UIViewController {
         
         cameraViewController.delegate = self
         countViewController.delegate = self
+        
+        configViewForSize(view.frame.size)
     }
     
     private func loadScriptItemDetailsToTextView(){
@@ -80,7 +83,7 @@ class RecoredVideoViewController : UIViewController {
         controlPanelViewController.delegate = self
     }
  
-
+    
     
     
 }
@@ -107,9 +110,16 @@ extension UIViewController {
 
 //MARK:- ControlPanelDelegate
 extension RecoredVideoViewController : ControlPanelDelegate {
+    func onPressStopTest() {
+        textViewController.reset()
+        textViewController.stopMoving()
+    }
+    
     func onPressRecored() {
         countViewController.start()
         countViewController.view.isHidden = false
+        controlPanelViewController.hideAllButtons()
+        controlPanelViewController.hideAllControlButtons()
     }
     
     func onPressStopRecored() {
@@ -141,6 +151,23 @@ extension RecoredVideoViewController : ControlPanelDelegate {
     
     
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        configViewForSize(size)
+    }
+    
+    func isPortraint(size : CGSize)->Bool{
+        size.width < size.height //THIS PORTRAIT
+    }
+    
+    func configViewForSize(_ size : CGSize) {
+        if isPortraint(size: size){
+            self.controlPanelViewController.presentButtonsForPortraitMode()
+        }else {
+            self.controlPanelViewController.presentButtonsForLandscapeMode()
+            self.cameraViewController.setAspect(RecoredSize.story.aspect)
+        }
+    }
     
     
 }
@@ -168,6 +195,7 @@ extension RecoredVideoViewController : CameraViewControllerDelegate {
     
     func cameraViewControllerEndLoading() {
         loadingViewController.view.isHidden = true
+        controlPanelViewController.presentAllControlButtons()
     }
     
     

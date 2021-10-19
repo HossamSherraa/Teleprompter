@@ -24,6 +24,7 @@ protocol ControlPanelDelegate : AnyObject {
     func didChangeRecoredSize(recoredSize:RecoredSize)
     func didChangeSpeed(newValue : Float)
     func onPressTest()
+    func onPressStopTest()
     func onPressRecored()
     func onPressStopRecored()
 }
@@ -32,8 +33,20 @@ class ControlPanelViewController : UIViewController {
     @IBOutlet weak var recordSizeView: UIStackView!
     @IBOutlet weak var speedSizeView: UIView!
     
+   
+    @IBOutlet weak var changeTextSizeButton: UIButton!
+    
+    @IBOutlet weak var changeSpeedButton: UIButton!
+    
+    @IBOutlet weak var changeRecordSizeButton: UIButton!
+    @IBOutlet weak var videoRecordSizeButton: UIButton!
     @IBOutlet weak var fontSizeLabel: UILabel!
     
+    @IBOutlet weak var postButton: UIButton!
+    
+    @IBOutlet weak var storyButton: UIButton!
+    
+    @IBOutlet weak var squareButton: UIButton!
     
     @IBOutlet weak var fontSizeBottomConstraints: NSLayoutConstraint!
     
@@ -69,24 +82,36 @@ class ControlPanelViewController : UIViewController {
         
     }
     @IBAction func onPressText(_ sender: Any) {
-        
+        if fontSizeView.isHidden {
         fontSizeView.unhide()
         recordSizeView.hide()
-        speedSizeView.hide()
+            speedSizeView.hide()
+            
+        }else {
+            hideAllButtons()
+        }
         
     }
     @IBAction func onPressSpeed(_ sender: Any) {
-        
+        if speedSizeView.isHidden {
         fontSizeView.hide()
         recordSizeView.hide()
-        speedSizeView.unhide()
+            speedSizeView.unhide()
+            
+        }else {
+            hideAllButtons()
+        }
         
     }
     @IBAction func onPressSize(_ sender: Any) {
-       
+        if recordSizeView.isHidden {
         fontSizeView.hide()
         recordSizeView.unhide()
-        speedSizeView.hide()
+            speedSizeView.hide()
+            
+        }else {
+            hideAllButtons()
+        }
         
     }
     @IBAction func onPressOnBackground(_ sender: Any) {
@@ -110,11 +135,12 @@ class ControlPanelViewController : UIViewController {
     }
     
     @IBAction func onPressTest(_ sender: UIButton) {
-        delegate?.onPressTest()
         isTesing.toggle()
         if isTesing {
+            delegate?.onPressTest()
         sender.setTitle("Stop", for: .normal)
         }else {
+            delegate?.onPressStopTest()
             sender.setTitle("Test", for: .normal)
         }
     }
@@ -147,7 +173,7 @@ class ControlPanelViewController : UIViewController {
         fontSizeLabel.text = text
     }
     
-    //PRIVATE
+    
     
     func hideAllButtons(){
         fontSizeView.hide()
@@ -155,6 +181,30 @@ class ControlPanelViewController : UIViewController {
         speedSizeView.hide()
        
     }
+    
+    
+    func hideAllControlButtons(){
+        self.videoRecordSizeButton.hide()
+        self.changeTextSizeButton.hide()
+        self.changeSpeedButton.hide()
+    }
+    func presentAllControlButtons(){
+        self.videoRecordSizeButton.unhide()
+        self.changeTextSizeButton.unhide()
+        self.changeSpeedButton.unhide()
+    }
+    func presentButtonsForLandscapeMode(){
+        hideAllButtons()
+        videoRecordSizeButton.hide()
+    }
+    
+    func presentButtonsForPortraitMode(){
+        hideAllButtons()
+        videoRecordSizeButton.unhide()
+    }
+    
+    
+    
     
     
    
