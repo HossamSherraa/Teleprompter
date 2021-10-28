@@ -9,7 +9,7 @@ import Foundation
 import AVFoundation
 import CoreMedia
 
-
+import UIKit
 
  class MovieComposer {
     
@@ -40,7 +40,7 @@ import CoreMedia
         let videoTrack = tracks.filter({$0.mediaType == .video}).first!
         compositionVideoTrack = mixComposition.addMutableTrack(withMediaType: AVMediaType.video, preferredTrackID: kCMPersistentTrackID_Invalid)
          
-         
+        
         do {
             try compositionVideoTrack.insertTimeRange(
                 CMTimeRange(start: CMTime.zero, duration: videoAsset.duration),
@@ -82,9 +82,13 @@ import CoreMedia
         let t2 = CGAffineTransform.init(rotationAngle: CGFloat(angle))
         let t3 = t2.concatenating(t1)
         
+        if isPortraint(size: UIScreen.main.bounds.size) {
         videoComposition.renderSize = .init(width: width, height: height)
         
         layerInstruction.setTransform(t3, at: .zero)
+        }else {
+            videoComposition.renderSize = .init(width: height, height: width)
+        }
         layerInstructions.append(layerInstruction)
     
         
@@ -108,6 +112,7 @@ import CoreMedia
         assetExportSession.videoComposition = videoComposition
         assetExportSession.outputFileType = AVFileType.mov
         assetExportSession.outputURL = composedMovieURL
+        
        
         
         // delete file

@@ -6,14 +6,14 @@
 //
 
 import AVFoundation
-
+import UIKit
 
 class MovieRecorder {
     static var isVideoShouldBeSaved : Bool = true
     internal init(exportURL: URL, delegate: AVCaptureFileOutputRecordingDelegate?) {
         self.exportURL = exportURL
         self.delegate = delegate
-        config()
+       config()
     }
     
     let exportURL : URL
@@ -39,11 +39,17 @@ class MovieRecorder {
         
         
         
+        
+        
     }
     
     
     func startRecording(){
         guard let delegate = self.delegate  else {return}
+        if let connection = self.outputMovie.connection(with: .video) {
+            connection.videoOrientation = .landscapeLeft
+            print(UIDevice.current.orientation.videoOrientation.rawValue)
+        }
         outputMovie.startRecording(to: exportURL, recordingDelegate: delegate)
        
     }

@@ -189,6 +189,7 @@ class ControlPanelViewController : UIViewController {
         self.changeSpeedButton.hide()
     }
     func presentAllControlButtons(){
+        
         self.videoRecordSizeButton.unhide()
         self.changeTextSizeButton.unhide()
         self.changeSpeedButton.unhide()

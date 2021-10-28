@@ -156,9 +156,7 @@ extension RecoredVideoViewController : ControlPanelDelegate {
         configViewForSize(size)
     }
     
-    func isPortraint(size : CGSize)->Bool{
-        size.width < size.height //THIS PORTRAIT
-    }
+    
     
     func configViewForSize(_ size : CGSize) {
         if isPortraint(size: size){
@@ -196,7 +194,15 @@ extension RecoredVideoViewController : CameraViewControllerDelegate {
     func cameraViewControllerEndLoading() {
         loadingViewController.view.isHidden = true
         controlPanelViewController.presentAllControlButtons()
+        if isPortraint(size: view.frame.size){
+            controlPanelViewController.presentButtonsForPortraitMode()
+        }else {
+            controlPanelViewController.presentButtonsForLandscapeMode()
+        }
     }
     
     
+}
+func isPortraint(size : CGSize)->Bool{
+    size.width < size.height //THIS PORTRAIT
 }

@@ -70,15 +70,16 @@ class CaptureSessionManager : NSObject , AVCaptureFileOutputRecordingDelegate{
     
     func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
         
+//        delegate?.didCompleteRecordingAt(url: outputFileURL)
         if MovieRecorder.isVideoShouldBeSaved {
             //SaveToPhotos
             let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0] as URL
             let filePath = documentsDirectory.appendingPathComponent("r\(Date().description).mov")
-            
+
             composer.addVideo(outputFileURL, aspect: globalAspect)
             let exportSession = composer.readyToComposeVideo(filePath)
             exportSession?.exportAsynchronously {
-                
+
                 PHPhotoLibrary.shared().performChanges({
                     PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: filePath)
                 }) { saved, error in
@@ -86,11 +87,11 @@ class CaptureSessionManager : NSObject , AVCaptureFileOutputRecordingDelegate{
                         self.delegate?.didCompleteRecordingAt(url: filePath)
                         let fetchOptions = PHFetchOptions()
                         fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
-                        
+
                     }
                 }
             }
-            
+
         }
     }
     
@@ -100,6 +101,7 @@ protocol CameraViewControllerDelegate : AnyObject{
     func cameraViewControllerStartLoading()
     func cameraViewControllerEndLoading()
     func cameraViewControllerNeedResetText()
+
 }
 class CameraViewController : UIViewController , CaptureSessionManagerDelegate {
     weak var delegate : CameraViewControllerDelegate?
@@ -134,7 +136,10 @@ class CameraViewController : UIViewController , CaptureSessionManagerDelegate {
         self.previewLayer?.frame = previewView.bounds
         setConstraintsHeightFor(aspect: globalAspect)
         
-        self.previewLayer?.connection?.videoOrientation = UIDevice.current.orientation.videoOrientation
+      
+            
+            self.previewLayer?.connection?.videoOrientation = UIDevice.current.orientation.videoOrientation
+        
         
     }
     
@@ -148,6 +153,7 @@ class CameraViewController : UIViewController , CaptureSessionManagerDelegate {
     }
     
     func stopRecording(){
+        
         isRecording = false
         
         
@@ -170,10 +176,12 @@ class CameraViewController : UIViewController , CaptureSessionManagerDelegate {
     
     internal func didCompleteRecordingAt(url : URL) {
         self.resetSession()
+        
+        
         DispatchQueue.main.async {[weak self] in
             guard let self = self else {return}
             let player = AVPlayer(url: url)
-            let vc = VideoPlayerViewController()
+            let vc = AVPlayerViewController()
             vc.player = player
             self.delegate?.cameraViewControllerEndLoading()
             self.present(vc, animated: true) {
@@ -287,7 +295,11 @@ public extension UIDeviceOrientation {
         case .landscapeRight:
             return .landscapeLeft
         default:
-            return .portrait
+            if isPortraint(size: UIScreen.main.bounds.size) {
+                return .portrait
+            }else {
+                return .landscapeLeft
+            }
         }
     }
 }
