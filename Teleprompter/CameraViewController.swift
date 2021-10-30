@@ -30,7 +30,9 @@ protocol CaptureSessionManagerDelegate : AnyObject {
     func didCompleteRecordingAt(url : URL)
 }
 var globalAspect : Aspect = RecoredSize.square.aspect
-class CaptureSessionManager : NSObject , AVCaptureFileOutputRecordingDelegate{
+class CaptureSessionManager : NSObject , MovieRecorderDelegate{
+    
+    
     
     weak var delegate : CaptureSessionManagerDelegate?
     lazy var  movieRecorder : MovieRecorder = MovieRecorder(exportURL: tempLinkURL, delegate: self)
@@ -58,6 +60,13 @@ class CaptureSessionManager : NSObject , AVCaptureFileOutputRecordingDelegate{
         movieRecorder.endRecording()
     }
     
+    func audioMeteringDidUpdated(decibels: Float) {
+        if decibels > -40 {
+            sendUserDidStartTalkingNotification()
+        }else {
+            sendUserDidStopTalkingNotification()
+        }
+    }
     
     func getPreviewLayer()->AVCaptureVideoPreviewLayer {
         
@@ -96,6 +105,14 @@ class CaptureSessionManager : NSObject , AVCaptureFileOutputRecordingDelegate{
     }
     
     
+    func sendUserDidStartTalkingNotification(){
+        NotificationCenter.default.post(name: .userDidStartTalking, object: nil)
+    }
+    
+    func sendUserDidStopTalkingNotification(){
+        NotificationCenter.default.post(name: .userDidStopTalking, object: nil)
+    }
+    
 }
 protocol CameraViewControllerDelegate : AnyObject{
     func cameraViewControllerStartLoading()
@@ -114,6 +131,8 @@ class CameraViewController : UIViewController , CaptureSessionManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIDevice.current.beginGeneratingDeviceOrientationNotifications()
+        NotificationCenter.default.addObserver(self, selector: #selector(onChangeOrientation), name: UIDevice.orientationDidChangeNotification, object: nil)
         captureSessionManager.delegate = self
         configPreviewView()
         
@@ -224,10 +243,13 @@ class CameraViewController : UIViewController , CaptureSessionManagerDelegate {
     var heightConstraints : NSLayoutConstraint?
     
     private   func setConstraintsHeightFor(aspect : Aspect){
-        widthConstraints?.isActive = false
-        heightConstraints?.isActive = false
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {return}
+        
+            self.widthConstraints?.isActive = false
+            self.heightConstraints?.isActive = false
         print(UIDevice.current.orientation.rawValue)
-        if view.frame.width < view.frame.height { //Port
+            if self.view.frame.width < self.view.frame.height { //Port
             self.widthConstraints = self.previewView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.minimumSized)
             self.heightConstraints = self.previewView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.minimumSized * aspect.aspectRatio)
             
@@ -238,11 +260,13 @@ class CameraViewController : UIViewController , CaptureSessionManagerDelegate {
             
             
         }
-        widthConstraints?.isActive = true
-        heightConstraints?.isActive = true
+            self.widthConstraints?.isActive = true
+            self.heightConstraints?.isActive = true
         
         self.view.superview?.layoutIfNeeded()
         self.previewLayer?.frame = self.previewView.bounds
+            
+        }
     }
     
     func setAspect(_ aspect : Aspect){
@@ -252,6 +276,11 @@ class CameraViewController : UIViewController , CaptureSessionManagerDelegate {
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         .portrait
+    }
+    
+    @objc
+    func onChangeOrientation(notification : NSNotification){
+        
     }
     
 }
@@ -294,6 +323,7 @@ public extension UIDeviceOrientation {
             return .landscapeRight
         case .landscapeRight:
             return .landscapeLeft
+       
         default:
             if isPortraint(size: UIScreen.main.bounds.size) {
                 return .portrait
@@ -301,5 +331,15 @@ public extension UIDeviceOrientation {
                 return .landscapeLeft
             }
         }
+    }
+}
+
+extension Notification.Name {
+    static var userDidStartTalking : Notification.Name {
+        Notification.Name( "userDidStartTalking")
+    }
+    
+    static var userDidStopTalking : Notification.Name {
+        Notification.Name( "userDidStopTalking")
     }
 }

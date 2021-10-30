@@ -26,7 +26,6 @@
 		9F7FEED12715AF7600829A0F /* MovieRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7FEED02715AF7600829A0F /* MovieRecorder.swift */; };
 		9FC064DE2709FDB300AE94D6 /* RecoredVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC064DD2709FDB300AE94D6 /* RecoredVideoViewController.swift */; };
 		9FD7923D270C9D5F008EFD25 /* ScriptsSavingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD7923C270C9D5F008EFD25 /* ScriptsSavingTests.swift */; };
-		9FEAA194272AE768002C5F3B /* CK_Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEAA193272AE768002C5F3B /* CK_Recorder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +62,6 @@
 		9F7FEED02715AF7600829A0F /* MovieRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRecorder.swift; sourceTree = "<group>"; };
 		9FC064DD2709FDB300AE94D6 /* RecoredVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoredVideoViewController.swift; sourceTree = "<group>"; };
 		9FD7923C270C9D5F008EFD25 /* ScriptsSavingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptsSavingTests.swift; sourceTree = "<group>"; };
-		9FEAA193272AE768002C5F3B /* CK_Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CK_Recorder.swift; sourceTree = "<group>"; };
 		A36EF6D923AA9FA9222B1C17 /* libPods-TeleprompterTests_.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TeleprompterTests_.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9DD49F0DD557983505708D /* libPods-Teleprompter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Teleprompter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C607453AD20ADC303197A8AD /* Pods-Teleprompter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teleprompter.debug.xcconfig"; path = "Target Support Files/Pods-Teleprompter/Pods-Teleprompter.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 				9F470C5327163F9200F22FFD /* CountViewController.swift */,
 				9F4957E9270B88D6002040D5 /* MovieComposer.swift */,
 				9F7FEED02715AF7600829A0F /* MovieRecorder.swift */,
-				9FEAA193272AE768002C5F3B /* CK_Recorder.swift */,
 				9F196DEC2708B855009C667A /* Main.storyboard */,
 				9F196DEF2708B856009C667A /* Assets.xcassets */,
 				9F196DF12708B856009C667A /* LaunchScreen.storyboard */,
@@ -323,7 +320,6 @@
 				9F4957EA270B88D6002040D5 /* MovieComposer.swift in Sources */,
 				9F196DFF2708D18E009C667A /* CameraViewController.swift in Sources */,
 				9F7FEED12715AF7600829A0F /* MovieRecorder.swift in Sources */,
-				9FEAA194272AE768002C5F3B /* CK_Recorder.swift in Sources */,
 				9F196E052708DEF0009C667A /* ItemViewCell.swift in Sources */,
 				9FC064DE2709FDB300AE94D6 /* RecoredVideoViewController.swift in Sources */,
 			);

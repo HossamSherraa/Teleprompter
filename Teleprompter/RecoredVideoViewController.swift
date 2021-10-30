@@ -30,6 +30,7 @@ class RecoredVideoViewController : UIViewController {
         countViewController.delegate = self
         
         configViewForSize(view.frame.size)
+        startObserveUserTalks()
     }
     
     private func loadScriptItemDetailsToTextView(){
@@ -83,6 +84,20 @@ class RecoredVideoViewController : UIViewController {
         controlPanelViewController.delegate = self
     }
  
+    func startObserveUserTalks(){
+        NotificationCenter.default.addObserver(self, selector: #selector(didStartTalking), name: .userDidStartTalking, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didStopTalking), name: .userDidStopTalking, object: nil)
+    }
+    
+    @objc
+    func didStartTalking(){
+        textViewController.startMoving()
+    }
+    
+    @objc
+    func didStopTalking(){
+        textViewController.stopMoving()
+    }
     
     
     
@@ -175,7 +190,7 @@ extension RecoredVideoViewController : ControlPanelDelegate {
 extension RecoredVideoViewController : CountViewControllerDelegate {
     func countViewControllerDidFinishCounting() {
         countViewController.view.isHidden = true
-        textViewController.startMoving()
+//        textViewController.startMoving()
         cameraViewController.startRecording()
     }
     
