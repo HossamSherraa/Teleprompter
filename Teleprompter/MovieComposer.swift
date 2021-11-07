@@ -87,6 +87,10 @@ import UIKit
         
         layerInstruction.setTransform(t3, at: .zero)
         }else {
+            let landscapLefOrientationTransform  = CGAffineTransform.init(rotationAngle: Double.pi)
+                .concatenating(.init(translationX: videoSize.height, y: videoSize.width))
+            layerInstruction.setTransform(landscapLefOrientationTransform, at: .zero)
+//            layerInstruction.setTransformRamp(fromStart: .identity, toEnd: landscapLefOrientationTransform, timeRange: .init(start: .zero, duration: .init(seconds: 5, preferredTimescale: 20))) // Just For Testing
             videoComposition.renderSize = .init(width: height, height: width)
         }
         layerInstructions.append(layerInstruction)

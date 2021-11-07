@@ -190,7 +190,6 @@ extension RecoredVideoViewController : ControlPanelDelegate {
 extension RecoredVideoViewController : CountViewControllerDelegate {
     func countViewControllerDidFinishCounting() {
         countViewController.view.isHidden = true
-//        textViewController.startMoving()
         cameraViewController.startRecording()
     }
     
@@ -198,8 +197,13 @@ extension RecoredVideoViewController : CountViewControllerDelegate {
 }
 
 extension RecoredVideoViewController : CameraViewControllerDelegate {
-    func cameraViewControllerNeedResetText() {
+    func cameraViewControllerNeedReset() {
         textViewController.reset()
+        if isPortraint(size: view.frame.size) {
+            controlPanelViewController.presentButtonsForPortraitMode()
+        }else {
+            controlPanelViewController.presentButtonsForLandscapeMode()
+        }
     }
     
     func cameraViewControllerStartLoading() {

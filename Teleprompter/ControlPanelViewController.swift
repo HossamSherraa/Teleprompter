@@ -61,8 +61,24 @@ class ControlPanelViewController : UIViewController {
     private var isRecording : Bool = false
     
    
-    let verticalSpaceForShowStateExtentionButtons : CGFloat = 20
-    let verticalSpaceForHideStateExtentionButtons : CGFloat = -90
+    var heightConstraints : NSLayoutConstraint!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        heightConstraints = self.view.heightAnchor.constraint(equalToConstant: 90)
+        heightConstraints.isActive = true
+    }
+    
+    func setHeightForPresentedOptions(){
+        heightConstraints.constant = 190
+        
+        view.layoutIfNeeded()
+    }
+    func setHeightForNotPresentedOptions(){
+        heightConstraints.constant = 90
+        view.layoutIfNeeded()
+    }
     
     //OPENED
     @IBAction func onPressRecord(_ sender: UIButton) {
@@ -86,8 +102,10 @@ class ControlPanelViewController : UIViewController {
         fontSizeView.unhide()
         recordSizeView.hide()
             speedSizeView.hide()
+            setHeightForPresentedOptions()
             
         }else {
+            setHeightForNotPresentedOptions()
             hideAllButtons()
         }
         
@@ -97,9 +115,10 @@ class ControlPanelViewController : UIViewController {
         fontSizeView.hide()
         recordSizeView.hide()
             speedSizeView.unhide()
-            
+            setHeightForPresentedOptions()
         }else {
             hideAllButtons()
+            setHeightForNotPresentedOptions()
         }
         
     }
@@ -108,14 +127,17 @@ class ControlPanelViewController : UIViewController {
         fontSizeView.hide()
         recordSizeView.unhide()
             speedSizeView.hide()
+            setHeightForPresentedOptions()
             
         }else {
             hideAllButtons()
+            setHeightForNotPresentedOptions()
         }
         
     }
     @IBAction func onPressOnBackground(_ sender: Any) {
        hideAllButtons()
+        setHeightForNotPresentedOptions()
         
     }
     
@@ -197,11 +219,15 @@ class ControlPanelViewController : UIViewController {
     func presentButtonsForLandscapeMode(){
         hideAllButtons()
         videoRecordSizeButton.hide()
+        changeTextSizeButton.unhide()
+        changeSpeedButton.unhide()
+        setHeightForNotPresentedOptions()
     }
     
     func presentButtonsForPortraitMode(){
         hideAllButtons()
-        videoRecordSizeButton.unhide()
+        presentAllControlButtons()
+        setHeightForNotPresentedOptions()
     }
     
     
