@@ -14,6 +14,7 @@ protocol MovieRecorderDelegate : AVCaptureFileOutputRecordingDelegate {
 }
 class MovieRecorder {
     static var isVideoShouldBeSaved : Bool = true
+    private var timer : Timer?
     var audioMeteringRecorder : AVAudioRecorder!
     internal init(exportURL: URL, delegate: MovieRecorderDelegate?) {
         self.exportURL = exportURL
@@ -66,7 +67,8 @@ class MovieRecorder {
     
     func startAudioMetering(){
         audioMeteringRecorder.record()
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self ] _ in
+        timer?.invalidate()
+       timer =  Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self ] _ in
             self?.audioMeteringRecorder.updateMeters()
             if let deciblesAvergePower = self?.audioMeteringRecorder.averagePower(forChannel: 0) {
                 self?.delegate?.audioMeteringDidUpdated(decibels: deciblesAvergePower)
@@ -79,6 +81,7 @@ class MovieRecorder {
     func stopAudioMetering(){
         audioMeteringRecorder.stop()
         audioMeteringRecorder.deleteRecording()
+        timer?.invalidate()
     }
     
    

@@ -117,7 +117,7 @@ class CaptureSessionManager : NSObject , MovieRecorderDelegate{
 protocol CameraViewControllerDelegate : AnyObject{
     func cameraViewControllerStartLoading()
     func cameraViewControllerEndLoading()
-    func cameraViewControllerNeedResetText()
+    func cameraViewControllerNeedReset()
 
 }
 class CameraViewController : UIViewController , CaptureSessionManagerDelegate {
@@ -185,7 +185,7 @@ class CameraViewController : UIViewController , CaptureSessionManagerDelegate {
         } onNo: { [weak self ] in
             MovieRecorder.isVideoShouldBeSaved = false
             self?.captureSessionManager.stopRecording()
-            self?.delegate?.cameraViewControllerNeedResetText()
+            self?.delegate?.cameraViewControllerNeedReset()
             
         }
         
@@ -328,7 +328,7 @@ public extension UIDeviceOrientation {
             if isPortraint(size: UIScreen.main.bounds.size) {
                 return .portrait
             }else {
-                return .landscapeLeft
+                return .landscapeRight
             }
         }
     }
