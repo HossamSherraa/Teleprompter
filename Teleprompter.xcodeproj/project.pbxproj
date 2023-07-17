@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37D9C7217C5DBAC8BD6AD7B0 /* libPods-TeleprompterTests_.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A36EF6D923AA9FA9222B1C17 /* libPods-TeleprompterTests_.a */; };
-		4DD99597330FB2EECB63E818 /* libPods-Teleprompter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9DD49F0DD557983505708D /* libPods-Teleprompter.a */; };
 		9F196DE72708B855009C667A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F196DE62708B855009C667A /* AppDelegate.swift */; };
 		9F196DE92708B855009C667A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F196DE82708B855009C667A /* SceneDelegate.swift */; };
 		9F196DEE2708B855009C667A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F196DEC2708B855009C667A /* Main.storyboard */; };
@@ -39,8 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3F0F9A7F9C9F3B1B669405C4 /* Pods-TeleprompterTests_.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleprompterTests_.release.xcconfig"; path = "Target Support Files/Pods-TeleprompterTests_/Pods-TeleprompterTests_.release.xcconfig"; sourceTree = "<group>"; };
-		5A774A69CC0B8A85ACA0788C /* Pods-Teleprompter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teleprompter.release.xcconfig"; path = "Target Support Files/Pods-Teleprompter/Pods-Teleprompter.release.xcconfig"; sourceTree = "<group>"; };
 		9F196DE32708B855009C667A /* Teleprompter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teleprompter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F196DE62708B855009C667A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F196DE82708B855009C667A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,10 +58,6 @@
 		9F7FEED02715AF7600829A0F /* MovieRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRecorder.swift; sourceTree = "<group>"; };
 		9FC064DD2709FDB300AE94D6 /* RecoredVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoredVideoViewController.swift; sourceTree = "<group>"; };
 		9FD7923C270C9D5F008EFD25 /* ScriptsSavingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptsSavingTests.swift; sourceTree = "<group>"; };
-		A36EF6D923AA9FA9222B1C17 /* libPods-TeleprompterTests_.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TeleprompterTests_.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA9DD49F0DD557983505708D /* libPods-Teleprompter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Teleprompter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C607453AD20ADC303197A8AD /* Pods-Teleprompter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teleprompter.debug.xcconfig"; path = "Target Support Files/Pods-Teleprompter/Pods-Teleprompter.debug.xcconfig"; sourceTree = "<group>"; };
-		E3F89B5663497686CCE21F51 /* Pods-TeleprompterTests_.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleprompterTests_.debug.xcconfig"; path = "Target Support Files/Pods-TeleprompterTests_/Pods-TeleprompterTests_.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +65,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DD99597330FB2EECB63E818 /* libPods-Teleprompter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +72,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37D9C7217C5DBAC8BD6AD7B0 /* libPods-TeleprompterTests_.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +84,6 @@
 				9F196DE52708B855009C667A /* Teleprompter */,
 				9F615378270C675700D49516 /* TeleprompterTests_ */,
 				9F196DE42708B855009C667A /* Products */,
-				BA28C4D63E7EAC03DB0C770E /* Pods */,
-				B317DD331CE15278514415B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,26 +129,6 @@
 			path = TeleprompterTests_;
 			sourceTree = "<group>";
 		};
-		B317DD331CE15278514415B7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BA9DD49F0DD557983505708D /* libPods-Teleprompter.a */,
-				A36EF6D923AA9FA9222B1C17 /* libPods-TeleprompterTests_.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BA28C4D63E7EAC03DB0C770E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C607453AD20ADC303197A8AD /* Pods-Teleprompter.debug.xcconfig */,
-				5A774A69CC0B8A85ACA0788C /* Pods-Teleprompter.release.xcconfig */,
-				E3F89B5663497686CCE21F51 /* Pods-TeleprompterTests_.debug.xcconfig */,
-				3F0F9A7F9C9F3B1B669405C4 /* Pods-TeleprompterTests_.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,7 +136,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F196DF72708B856009C667A /* Build configuration list for PBXNativeTarget "Teleprompter" */;
 			buildPhases = (
-				ADB890CADF60ABE414A3AB5F /* [CP] Check Pods Manifest.lock */,
 				9F196DDF2708B855009C667A /* Sources */,
 				9F196DE02708B855009C667A /* Frameworks */,
 				9F196DE12708B855009C667A /* Resources */,
@@ -186,7 +153,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F61537E270C675700D49516 /* Build configuration list for PBXNativeTarget "TeleprompterTests_" */;
 			buildPhases = (
-				4932DC56B83E4F05D93C0631 /* [CP] Check Pods Manifest.lock */,
 				9F615373270C675700D49516 /* Sources */,
 				9F615374270C675700D49516 /* Frameworks */,
 				9F615375270C675700D49516 /* Resources */,
@@ -258,53 +224,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		4932DC56B83E4F05D93C0631 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TeleprompterTests_-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ADB890CADF60ABE414A3AB5F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Teleprompter-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		9F196DDF2708B855009C667A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -367,7 +286,9 @@
 		9F196DF52708B856009C667A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -399,6 +320,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				EAGER_LINKING = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -415,20 +337,24 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ENABLE_BARE_SLASH_REGEX = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		9F196DF62708B856009C667A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -460,6 +386,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EAGER_LINKING = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -470,24 +397,27 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = RELEASE;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_ENABLE_BARE_SLASH_REGEX = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		9F196DF82708B856009C667A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C607453AD20ADC303197A8AD /* Pods-Teleprompter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 282F9354F9;
+				DEVELOPMENT_TEAM = 7J9KA6Z6QG;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
@@ -497,22 +427,26 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fgami.Teleprompter;
+				MARKETING_VERSION = 3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = HossamSherraa.Teleprompeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TREAT_MISSING_BASELINES_AS_TEST_FAILURES = YES;
 			};
 			name = Debug;
 		};
 		9F196DF92708B856009C667A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A774A69CC0B8A85ACA0788C /* Pods-Teleprompter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 282F9354F9;
+				DEVELOPMENT_TEAM = 7J9KA6Z6QG;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_TESTING_SEARCH_PATHS = YES;
@@ -523,21 +457,26 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fgami.Teleprompter;
+				MARKETING_VERSION = 3.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = HossamSherraa.Teleprompeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TREAT_MISSING_BASELINES_AS_TEST_FAILURES = YES;
 			};
 			name = Release;
 		};
 		9F61537F270C675700D49516 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E3F89B5663497686CCE21F51 /* Pods-TeleprompterTests_.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AHJJ77N3U7;
+				DEVELOPMENT_TEAM = 7J9KA6Z6QG;
 				INFOPLIST_FILE = TeleprompterTests_/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -546,19 +485,21 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fgami.TeleprompterTests-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Teleprompter.app/Teleprompter";
 			};
 			name = Debug;
 		};
 		9F615380270C675700D49516 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F0F9A7F9C9F3B1B669405C4 /* Pods-TeleprompterTests_.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AHJJ77N3U7;
+				DEVELOPMENT_TEAM = 7J9KA6Z6QG;
 				INFOPLIST_FILE = TeleprompterTests_/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -567,8 +508,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fgami.TeleprompterTests-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Teleprompter.app/Teleprompter";
 			};
 			name = Release;

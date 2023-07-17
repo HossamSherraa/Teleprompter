@@ -17,7 +17,7 @@
                BlueprintIdentifier = "202F377084C030A188ACBCF7B001DD74"
                BuildableName = "libPods-Teleprompter.a"
                BlueprintName = "Pods-Teleprompter"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
